@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --dir src",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
     "next": "13.4.4",
@@ -20,8 +21,10 @@
     "@types/react-dom": "18.2.4",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.8.8",
     "typescript": "5.1.3"
   }
 }
