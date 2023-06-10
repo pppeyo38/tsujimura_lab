@@ -25,17 +25,17 @@ const _Container = styled.div`
 `
 
 const _Main = styled.main`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
   padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `
 
 const _Title = styled.h1`
   margin: 0;
-  line-height: 1.15;
   font-size: 4rem;
+  line-height: 1.15;
 `
