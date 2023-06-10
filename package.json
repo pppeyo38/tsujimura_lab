@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint --dir src",
     "lint:fix": "yarn lint --fix",
+    "stylelint": "stylelint \"src/**/*.+(css|tsx)\"",
+    "stylelint:fix": "yarn stylelint -- --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
@@ -20,6 +22,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@stylelint/postcss-css-in-js": "^0.38.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.9",
     "@types/react-dom": "18.2.4",
@@ -28,7 +31,10 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "postcss-syntax": "^0.36.2",
     "prettier": "^2.8.8",
+    "stylelint": "^15.7.0",
+    "stylelint-config-standard": "^33.0.0",
     "typescript": "5.1.3"
   }
 }
