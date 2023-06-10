@@ -1,0 +1,14 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "customSyntax": "@stylelint/postcss-css-in-js"
+    }
+  ],
+  "rules": {
+    "string-quotes": "single",
+    "order/properties-alphabetical-order": null
+  },
+  "ignoreFiles": ["**/node_modules/**", ".gitignore"]
+}
