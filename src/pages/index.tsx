@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import { styled } from '@linaria/react'
 
 export default function Home() {
