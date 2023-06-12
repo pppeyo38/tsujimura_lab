@@ -9,7 +9,7 @@
     "lint": "next lint --dir src",
     "lint:fix": "yarn lint --fix",
     "stylelint": "stylelint \"src/**/*.+(css|tsx)\"",
-    "stylelint:fix": "yarn stylelint -- --fix",
+    "stylelint:fix": "yarn stylelint --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
