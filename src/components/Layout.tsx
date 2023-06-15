@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 
 type Props = {
@@ -11,7 +12,7 @@ export default function Layout({ children }: Props) {
     <>
       <Header />
       <main>{children}</main>
-      <footer>フッター</footer>
+      <Footer />
     </>
   )
 }
