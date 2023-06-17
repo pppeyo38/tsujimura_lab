@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { styled } from '@linaria/react'
 
+import { Heading } from '@/components/Heading'
 import { Color, FontFamily } from '@/styles/StyleToken'
 
 export default function Home() {
@@ -23,29 +24,33 @@ export default function Home() {
       </_TopVisual>
 
       <_Block>
-        <_Container>
-          <_Heading>News</_Heading>
+        <_ArticleContainer>
+          <Heading>News</Heading>
           <_NewsList>
             <_NewsItem>
               <Link href='/'>
                 <span>2022/05/15</span>
-                ホームページをリニューアルしました。進学や研究室配属などに役立ててください。
+                <p>
+                  ホームページをリニューアルしました。進学や研究室配属などに役立ててください。
+                </p>
               </Link>
             </_NewsItem>
             <_NewsItem>
               <Link href='/'>
                 <span>2021/02/16</span>
-                本研究室学部4年生の伊藤登萌さんと中山智恵さんが2020年度色彩検定において1級に合格しました。
+                <p>
+                  本研究室学部4年生の伊藤登萌さんと中山智恵さんが2020年度色彩検定において1級に合格しました。
+                </p>
               </Link>
             </_NewsItem>
             <_NewsItem>
               <Link href='/'>
                 <span>2017/09/06-09</span>
-                辻村教授が国際瞳孔学会でLoewenfeld記念講演を行いました。
+                <p>辻村教授が国際瞳孔学会でLoewenfeld記念講演を行いました。</p>
               </Link>
             </_NewsItem>
           </_NewsList>
-        </_Container>
+        </_ArticleContainer>
       </_Block>
     </>
   )
@@ -78,11 +83,10 @@ const _Block = styled.article`
   margin: 80px 0;
 `
 
-const _Heading = styled.h2`
-  color: ${Color.main_black};
-  font-family: ${FontFamily.nunito_sans};
-  font-size: 32px;
-  line-height: 1.42;
+const _ArticleContainer = styled.div`
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
 `
 
 const _NewsList = styled.ul`
@@ -94,6 +98,10 @@ const _NewsList = styled.ul`
 
 const _NewsItem = styled.li`
   line-height: 1.75rem;
+
+  a {
+    display: inline-flex;
+  }
 
   span {
     display: inline-block;
