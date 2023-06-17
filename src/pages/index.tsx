@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { styled } from '@linaria/react'
 
 import { Heading } from '@/components/Heading'
-import { Color, FontFamily } from '@/styles/StyleToken'
+import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
 
 export default function Home() {
   return (
@@ -15,11 +15,11 @@ export default function Home() {
 
       <_TopVisual>
         <_Container>
-          <_Title>
+          <_SiteTitle>
             Nagoya City University
             <br />
             Tsujimura Lab
-          </_Title>
+          </_SiteTitle>
         </_Container>
       </_TopVisual>
 
@@ -71,11 +71,12 @@ const _Container = styled.div`
   margin: 0 auto;
 `
 
-const _Title = styled.h1`
+const _SiteTitle = styled.h1`
   color: ${Color.main_white};
+  font-weight: ${FontWeight.bold};
   font-family: ${FontFamily.nunito_sans};
-  font-size: 42px;
-  line-height: 1.358;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
   letter-spacing: 0.05em;
 `
 
