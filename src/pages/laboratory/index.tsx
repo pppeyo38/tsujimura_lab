@@ -11,7 +11,7 @@ export default function Research() {
   return (
     <>
       <Head>
-        <title>研究実績｜辻村研究室｜名古屋市立大学芸術工学部</title>
+        <title>Lab Info｜辻村研究室｜名古屋市立大学芸術工学部</title>
       </Head>
 
       <article>
