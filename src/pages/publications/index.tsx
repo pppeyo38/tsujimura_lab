@@ -7,9 +7,9 @@ import { Heading } from '@/components/typography/Heading'
 import { SubHeading } from '@/components/typography/SubHeading'
 import { Title } from '@/components/typography/Title'
 import {
-  ArticlesList,
-  CollaborateList,
-  MediaList
+  articlesList,
+  collaborateList,
+  mediaList
 } from '@/content/publications'
 
 export default function Publications() {
@@ -25,7 +25,7 @@ export default function Publications() {
           <section>
             <Heading>Selected Articles</Heading>
             <SubHeading>主な研究業績</SubHeading>
-            {ArticlesList.map((item, index) => (
+            {articlesList.map((item, index) => (
               <_PublicationItem key={index}>
                 <ExternalLink link={item.link} isBold>
                   {item.title}
@@ -38,7 +38,7 @@ export default function Publications() {
             <Heading>Collaborations</Heading>
             <SubHeading>共同研究</SubHeading>
             <_List>
-              {CollaborateList.map((item, index) => (
+              {collaborateList.map((item, index) => (
                 <_ListItem key={index}>
                   <_SubList>
                     {item.heading}
@@ -54,7 +54,7 @@ export default function Publications() {
             <Heading>Media Coverage</Heading>
             <SubHeading>メディア掲載情報</SubHeading>
             <_NewsList>
-              {MediaList.map((item, index) => (
+              {mediaList.map((item, index) => (
                 <_NewsItem key={index}>
                   <span>{item.date}</span>
                   <div>

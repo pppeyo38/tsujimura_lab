@@ -5,6 +5,7 @@ import { styled } from '@linaria/react'
 import { ExternalLink } from '@/components/typography/ExternalLink'
 import { Heading } from '@/components/typography/Heading'
 import { Title } from '@/components/typography/Title'
+import { memberList } from '@/content/team'
 
 export default function Research() {
   return (
@@ -25,36 +26,18 @@ export default function Research() {
           <section>
             <Heading>Staffs and students</Heading>
             <table>
-              <tr>
-                <_TableHead>研究員</_TableHead>
-                <_TableData>齋藤 真里菜 / Marina Saito</_TableData>
-              </tr>
-              <tr>
-                <_TableHead>研究補助員</_TableHead>
-                <_TableData>
-                  若松 夏芽 / Natsume Wakamatsu，藤田 優之 / Yuno Hujita
-                </_TableData>
-              </tr>
-              <tr>
-                <_TableHead>大学院修士課程</_TableHead>
-                <_TableData>藤田 優之 / Yuno Hujita</_TableData>
-              </tr>
-              <tr>
-                <_TableHead>学部</_TableHead>
-                <_TableData>
-                  森 璃弥武 / Lyam Mori，大竹 未来 / Miku Otake，三品 佳穂 /
-                  Kaho Mishina，滝川 瑞季 / Takigawa Mizuki，中嶋 莉那 / Rina
-                  Nakazima，岩崎 百花 / Momoka Iwasaki，嬉野 友妃菜 / Yukina
-                  Ureshino
-                </_TableData>
-              </tr>
-              <tr>
-                <_TableHead>同窓生</_TableHead>
-                <_TableData>
-                  伊藤 登萌 / Tomoe Ito，高須 葵 / Aoi Takasu，Bullot
-                  Loïc(2021)，Vincent Conus(2020)，Yan Michellod (2019)
-                </_TableData>
-              </tr>
+              <tbody>
+                {memberList.map((item, index) => (
+                  <tr key={index}>
+                    <_TableHead>{item.head}</_TableHead>
+                    <_TableData>
+                      {item.data.map((data, index) => (
+                        <_NameWrap key={index}>{data}</_NameWrap>
+                      ))}
+                    </_TableData>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </section>
         </_ArticleInner>
@@ -84,10 +67,22 @@ const tabelCell = {
 }
 
 const _TableHead = styled.th`
-  width: 160px;
   ${tabelCell}
+  width: 160px;
 `
 
 const _TableData = styled.td`
   ${tabelCell}
+  word-break: keep-all;
+`
+
+const _NameWrap = styled.span`
+  display: inline-flex;
+
+  :not(:last-child) {
+    margin-right: 0.5em;
+    &:after {
+      content: ',';
+    }
+  }
 `

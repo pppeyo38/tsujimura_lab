@@ -1,4 +1,4 @@
-export const ArticlesList = [
+export const articlesList = [
   {
     title:
       'Melanopsin-Based Brightness Discrimination in Mice and Humans(2012)',
@@ -61,7 +61,7 @@ export const ArticlesList = [
   }
 ]
 
-export const CollaborateList = [
+export const collaborateList = [
   {
     heading: 'Melanopsin expressing retinal ganglion cells',
     content: [
@@ -90,7 +90,7 @@ export const CollaborateList = [
   }
 ]
 
-export const MediaList = [
+export const mediaList = [
   {
     date: '2012/06/07, 14',
     heading: '週刊新潮で研究が紹介',
