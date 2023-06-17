@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { styled } from '@linaria/react'
 
 import { Heading } from '@/components/Heading'
+import { Text } from '@/components/Text'
 import { Title } from '@/components/Title'
 
 export default function Research() {
@@ -16,6 +17,9 @@ export default function Research() {
         <_ArticleContainer>
           <Title>Laboratory Information</Title>
           <Heading>Research</Heading>
+          <Text>
+            生命を一つの汎用的情報処理システムとみなし、視覚情報である色や形、明るさ情報がどのような過程によって処理されるのかを神経生理学的、実験心理学的なアプローチで研究しています。
+          </Text>
           <Heading>Student research and projects</Heading>
           <Heading>Our recent activities</Heading>
         </_ArticleContainer>
