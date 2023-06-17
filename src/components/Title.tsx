@@ -13,6 +13,7 @@ export const Title = ({ children }: Props) => {
 }
 
 const _Title = styled.h1`
+  margin-bottom: 0.83em;
   font-weight: ${FontWeight.bold};
   font-family: ${FontFamily.nunito_sans};
   font-size: 2rem;

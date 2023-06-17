@@ -13,6 +13,7 @@ export const Text = ({ children }: Props) => {
 }
 
 const _Text = styled.p`
+  margin: 20px 0;
   font-family: ${FontFamily.zenkaku_gothic};
   font-size: 1rem;
   line-height: 1.75rem;
