@@ -5,6 +5,11 @@ import { styled } from '@linaria/react'
 import { Heading } from '@/components/typography/Heading'
 import { SubHeading } from '@/components/typography/SubHeading'
 import { Title } from '@/components/typography/Title'
+import {
+  ArticlesList,
+  CollaborateList,
+  MediaList
+} from '@/content/publications'
 import { FontWeight } from '@/styles/StyleToken'
 
 export default function Publications() {
@@ -20,52 +25,54 @@ export default function Publications() {
           <section>
             <Heading>Selected Articles</Heading>
             <SubHeading>主な研究業績</SubHeading>
-            <_PublicationItem>
-              <_PublicationLink href='/' target='_blank' rel='noopener'>
-                Melanopsin-Based Brightness Discrimination in Mice and
-                Humans(2012)
-              </_PublicationLink>
-              <span>マウスとヒトにおけるメラノプシンに基づく輝度識別</span>
-            </_PublicationItem>
-            <_PublicationItem>
-              <_PublicationLink href='/' target='_blank' rel='noopener'>
-                Melanopsin-Based Brightness Discrimination in Mice and
-                Humans(2012)
-              </_PublicationLink>
-              <span>マウスとヒトにおけるメラノプシンに基づく輝度識別</span>
-            </_PublicationItem>
+            {ArticlesList.map((item, index) => (
+              <_PublicationItem key={index}>
+                <_PublicationLink
+                  href={item.link}
+                  target='_blank'
+                  rel='noopener'
+                >
+                  {item.title}
+                </_PublicationLink>
+                <span>{item.translation}</span>
+              </_PublicationItem>
+            ))}
           </section>
           <section>
             <Heading>Collaborations</Heading>
             <SubHeading>共同研究</SubHeading>
             <_List>
-              <_ListItem>
-                Melanopsin expressing retinal ganglion cells
-                <_SubList>
-                  <_SubListItem>
-                    Katsunori Okajima,School of Engineering,Yokohama National
-                    University,Japan
-                  </_SubListItem>
-                </_SubList>
-              </_ListItem>
+              {CollaborateList.map((item, index) => (
+                <_ListItem key={index}>
+                  <_SubList>
+                    {item.heading}
+                    {item.content.map((subItem, subIndex) => (
+                      <_SubListItem key={index}>{subItem}</_SubListItem>
+                    ))}
+                  </_SubList>
+                </_ListItem>
+              ))}
             </_List>
           </section>
           <section>
             <Heading>Media Coverage</Heading>
             <SubHeading>メディア掲載情報</SubHeading>
             <_NewsList>
-              <_NewsItem>
-                <span>2012/06/07, 14</span>
-                <p>
-                  週刊新潮「サイエンス宅配便：目の中にある第３の受容体」（サイエンスライター竹内薫さん）で研究が紹介
-                </p>
-              </_NewsItem>
-              <_NewsItem>
-                <span>2012/06/07, 14</span>
-                <p>
-                  週刊新潮「サイエンス宅配便：目の中にある第３の受容体」（サイエンスライター竹内薫さん）で研究が紹介
-                </p>
-              </_NewsItem>
+              {MediaList.map((item, index) => (
+                <_NewsItem key={index}>
+                  <span>{item.date}</span>
+                  <div>
+                    <p>{item.heading}</p>
+                    {item.link ? (
+                      <a href={item.link} target='_blank' rel='noopener'>
+                        {item.media}
+                      </a>
+                    ) : (
+                      <p>{item.media}</p>
+                    )}
+                  </div>
+                </_NewsItem>
+              ))}
             </_NewsList>
           </section>
         </_ArticleInner>

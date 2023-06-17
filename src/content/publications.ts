@@ -92,7 +92,7 @@ export const CollaborateList = [
 
 export const MediaList = [
   {
-    date: '2012.6.7/2012.6.14',
+    date: '2012/06/07, 14',
     heading: '週刊新潮で研究が紹介',
     media:
       '「サイエンス宅配便：目の中にある第３の受容体」（サイエンスライター竹内薫さん）'
@@ -101,7 +101,7 @@ export const MediaList = [
     date: '2012/06/04',
     heading: '日経BPネットで研究が紹介',
     media:
-      '「照明機器やディスプレイの省エネにもつながる」、明るさ感に影響を与える仕組みを鹿児島大学らが解明」',
+      '「照明機器やディスプレイの省エネにもつながる」、明るさ感に影響を与える仕組みを鹿児島大学らが解明',
     link: 'https://xtech.nikkei.com/dm/article/NEWS/20120604/221397/'
   },
   {
@@ -110,28 +110,28 @@ export const MediaList = [
     media: '「網膜メラノプシン神経節細胞：明るさ知覚の機能確認」'
   },
   {
-    date: '2011.3.26',
+    date: '2011/3/26',
     heading: '南日本新聞 「研究のおと」欄',
     media: '「生体リズムの解明：手作り装置で細胞機能解明」'
   },
   {
-    date: '2010.11',
+    date: '2010/11',
     heading: '鹿児島大学広報誌 鹿大ジャーナルで研究が紹介',
     media: '「メラノプシン神経節細胞の機能解明に挑む」',
     link: 'http://www.sda.nagoya-cu.ac.jp/tsujimura/kadaiNo185_2010.pdf'
   },
   {
-    date: '2010.4.23',
+    date: '2010/4/23',
     heading: '科学新聞',
     media: '「概日リズム調節に関与 新光受容器メカニズム発見」'
   },
   {
-    date: '2010.6.11',
+    date: '2010/6/11',
     heading: '南日本新聞',
     media: '「鹿児島知の最前線：時差ぼけを早期修正.新装置で神経細胞を刺激」'
   },
   {
-    date: '2008.8',
+    date: '2008/8',
     heading: '積水化学工業',
     media: '「自然に学ぶ研究事例：自然光に学ぶ多原色光源装置の開発」',
     link: 'https://www.sekisui.co.jp/sustainability_report/'
