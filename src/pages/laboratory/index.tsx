@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { styled } from '@linaria/react'
 
 import { Heading } from '@/components/Heading'
+import { SubHeading } from '@/components/SubHeading'
 import { Text } from '@/components/Text'
 import { Title } from '@/components/Title'
 
@@ -20,6 +21,7 @@ export default function Research() {
           <Text>
             生命を一つの汎用的情報処理システムとみなし、視覚情報である色や形、明るさ情報がどのような過程によって処理されるのかを神経生理学的、実験心理学的なアプローチで研究しています。
           </Text>
+          <SubHeading>メラノプシン神経節細胞(ipRGC)の研究</SubHeading>
           <Heading>Student research and projects</Heading>
           <Heading>Our recent activities</Heading>
         </_ArticleContainer>
