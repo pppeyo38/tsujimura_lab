@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { styled } from '@linaria/react'
 
+import { ExternalLink } from '@/components/typography/ExternalLink'
 import { Heading } from '@/components/typography/Heading'
 import { SubHeading } from '@/components/typography/SubHeading'
 import { Title } from '@/components/typography/Title'
@@ -10,7 +11,6 @@ import {
   CollaborateList,
   MediaList
 } from '@/content/publications'
-import { FontWeight } from '@/styles/StyleToken'
 
 export default function Publications() {
   return (
@@ -27,13 +27,9 @@ export default function Publications() {
             <SubHeading>主な研究業績</SubHeading>
             {ArticlesList.map((item, index) => (
               <_PublicationItem key={index}>
-                <_PublicationLink
-                  href={item.link}
-                  target='_blank'
-                  rel='noopener'
-                >
+                <ExternalLink link={item.link} isBold>
                   {item.title}
-                </_PublicationLink>
+                </ExternalLink>
                 <span>{item.translation}</span>
               </_PublicationItem>
             ))}
@@ -64,9 +60,7 @@ export default function Publications() {
                   <div>
                     <p>{item.heading}</p>
                     {item.link ? (
-                      <a href={item.link} target='_blank' rel='noopener'>
-                        {item.media}
-                      </a>
+                      <ExternalLink link={item.link}>{item.media}</ExternalLink>
                     ) : (
                       <p>{item.media}</p>
                     )}
@@ -100,14 +94,6 @@ const _PublicationItem = styled.div`
     font-size: 1rem;
     line-height: 1.25rem;
   }
-`
-
-const _PublicationLink = styled.a`
-  font-weight: ${FontWeight.bold};
-  font-size: 1rem;
-  line-height: 1.75rem;
-  letter-spacing: 0.03em;
-  text-decoration-line: underline;
 `
 
 const _List = styled.ul`

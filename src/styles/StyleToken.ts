@@ -1,6 +1,7 @@
 export const Color = {
   main_blue: '#00BBF0',
   main_white: '#FFF',
+  main_grey: '#7A7A7A',
   main_black: '#212121'
 }
 

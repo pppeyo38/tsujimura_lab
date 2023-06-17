@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { styled } from '@linaria/react'
 
+import { ExternalLink } from '@/components/typography/ExternalLink'
 import { Heading } from '@/components/typography/Heading'
 import { Title } from '@/components/typography/Title'
 
@@ -17,13 +18,9 @@ export default function Research() {
           <Title>Team</Title>
           <section>
             <Heading>Professor</Heading>
-            <_Link
-              href='https://nrd.nagoya-cu.ac.jp/profile/ja.0597f54a4f5fa058.html'
-              target='_blank'
-              rel='noopener'
-            >
+            <ExternalLink link="'https://nrd.nagoya-cu.ac.jp/profile/ja.0597f54a4f5fa058.html'">
               辻村 誠一 / Sei-ichi Tsujimura
-            </_Link>
+            </ExternalLink>
           </section>
           <section>
             <Heading>Staffs and students</Heading>
@@ -74,23 +71,6 @@ const _ArticleInner = styled.div`
   max-width: 840px;
   margin: 0 auto;
   padding: 6rem 0;
-`
-
-const _Link = styled.a`
-  position: relative;
-  display: inline-block;
-  margin: 0 0 20px;
-  font-size: 1rem;
-  line-height: 1.75rem;
-  text-decoration: underline;
-
-  &:after {
-    content: url(/external-link.svg);
-    position: absolute;
-    top: 2px;
-    right: -18px;
-    height: 20px;
-  }
 `
 
 const tabelCell = {
