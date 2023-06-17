@@ -57,7 +57,7 @@ export default function Research() {
           </section>
           <section>
             <Heading>Our recent activities</Heading>
-            <SubHeading>メラノプシン神経節細胞(ipRGC)の研究</SubHeading>
+            <SubHeading>研究室での実験</SubHeading>
             <Text>
               NVIDAのJetson Nanoを搭載したSparkFun JetBot AI
               ロボットキットを利用してディープラーニングを勉強しました。以下の動画は、衝突回避走行デモを用いて落下回避と衝突回避を学習させて試走させた時のものです。
