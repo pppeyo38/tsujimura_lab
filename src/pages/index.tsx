@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { styled } from '@linaria/react'
 
-import { Heading } from '@/components/Heading'
+import { Heading } from '@/components/typography/Heading'
 import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
 
 export default function Home() {

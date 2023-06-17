@@ -2,10 +2,10 @@ import Head from 'next/head'
 
 import { styled } from '@linaria/react'
 
-import { Heading } from '@/components/Heading'
-import { SubHeading } from '@/components/SubHeading'
-import { Text } from '@/components/Text'
-import { Title } from '@/components/Title'
+import { Heading } from '@/components/typography/Heading'
+import { SubHeading } from '@/components/typography/SubHeading'
+import { Text } from '@/components/typography/Text'
+import { Title } from '@/components/typography/Title'
 
 export default function Research() {
   return (
