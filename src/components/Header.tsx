@@ -16,7 +16,7 @@ export default function Header() {
                 <Link href='/'>Top</Link>
               </_HeaderNavItem>
               <_HeaderNavItem>
-                <Link href='/research'>Research</Link>
+                <Link href='/research'>Lab Info</Link>
               </_HeaderNavItem>
               <_HeaderNavItem>
                 <Link href='/team'>Team</Link>
