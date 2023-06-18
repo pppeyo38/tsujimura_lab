@@ -23,8 +23,8 @@ export default function Home() {
         </_Container>
       </_TopVisual>
 
-      <_Block>
-        <_ArticleContainer>
+      <_ArticleContainer>
+        <_NewsSection>
           <Heading>News</Heading>
           <_NewsList>
             <_NewsItem>
@@ -50,8 +50,8 @@ export default function Home() {
               </Link>
             </_NewsItem>
           </_NewsList>
-        </_ArticleContainer>
-      </_Block>
+        </_NewsSection>
+      </_ArticleContainer>
     </>
   )
 }
@@ -60,7 +60,7 @@ const _TopVisual = styled.section`
   display: flex;
   align-items: center;
   width: 100vw;
-  height: calc(100svh - 64px);
+  height: 100svh;
   background-color: ${Color.main_blue};
 `
 
@@ -80,11 +80,11 @@ const _SiteTitle = styled.h1`
   letter-spacing: 0.05em;
 `
 
-const _Block = styled.article`
+const _ArticleContainer = styled.article`
   margin: 80px 0;
 `
 
-const _ArticleContainer = styled.div`
+const _NewsSection = styled.section`
   width: 100%;
   max-width: 840px;
   margin: 0 auto;
