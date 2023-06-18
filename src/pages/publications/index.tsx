@@ -11,6 +11,7 @@ import {
   collaborateList,
   mediaList
 } from '@/content/publications'
+import { FontWeight } from '@/styles/StyleToken'
 
 export default function Publications() {
   return (
@@ -26,7 +27,7 @@ export default function Publications() {
             <Heading>Selected Articles</Heading>
             <SubHeading>主な研究業績</SubHeading>
             {articlesList.map((item, index) => (
-              <_PublicationItem key={index}>
+              <_PublicationItem key={`publication${index}`}>
                 <ExternalLink link={item.link} isBold>
                   {item.title}
                 </ExternalLink>
@@ -39,13 +40,15 @@ export default function Publications() {
             <SubHeading>共同研究</SubHeading>
             <_List>
               {collaborateList.map((item, index) => (
-                <_ListItem key={index}>
-                  <_SubList>
+                <_ListItem key={`collaborate${index}`}>
+                  <ul>
                     {item.heading}
                     {item.content.map((subItem, subIndex) => (
-                      <_SubListItem key={index}>{subItem}</_SubListItem>
+                      <_SubListItem key={`content${subIndex}`}>
+                        {subItem}
+                      </_SubListItem>
                     ))}
-                  </_SubList>
+                  </ul>
                 </_ListItem>
               ))}
             </_List>
@@ -55,7 +58,7 @@ export default function Publications() {
             <SubHeading>メディア掲載情報</SubHeading>
             <_NewsList>
               {mediaList.map((item, index) => (
-                <_NewsItem key={index}>
+                <_NewsItem key={`media${index}`}>
                   <span>{item.date}</span>
                   <div>
                     <p>{item.heading}</p>
@@ -97,12 +100,16 @@ const _PublicationItem = styled.div`
 `
 
 const _List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   margin: 20px 0;
 `
 
 const _ListItem = styled.li`
   position: relative;
   padding-inline-start: 20px;
+  font-weight: ${FontWeight.bold};
   font-size: 1rem;
   line-height: 1.75rem;
 
@@ -114,11 +121,10 @@ const _ListItem = styled.li`
   }
 `
 
-const _SubList = styled.ul``
-
 const _SubListItem = styled.li`
   position: relative;
   padding-inline-start: 20px;
+  font-weight: ${FontWeight.regular};
   font-size: 1rem;
   line-height: 1.75rem;
 
