@@ -12,9 +12,9 @@ export default function Footer() {
             辻村誠一研究室
           </_FooterName>
           <_FooterAddress>
-            〒464-0083 名古屋市千種区北千種2丁目1番10号
+            〒464-0083 愛知県名古屋市千種区北千種2丁目1番10号
             <br />
-            TEL052-721-1225 (代) FAX052-721-3110
+            TEL:052-721-1225 (代) FAX:052-721-3110
           </_FooterAddress>
           <_CopyRight>© 2023 Tsujimura Laboratory</_CopyRight>
         </_Inner>
@@ -37,31 +37,32 @@ const _Container = styled.div`
 const _Inner = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 16px;
 `
 
 const _FooterName = styled.h2`
   color: ${Color.main_white};
   font-weight: ${FontWeight.bold};
-  font-size: 24px;
+  font-size: 1.3125rem;
+  line-height: 1.75rem;
 `
 
 const _FooterSubName = styled.span`
   display: block;
-  margin-bottom: 8px;
   color: ${Color.main_white};
-  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.75rem;
 `
 
 const _FooterAddress = styled.address`
   color: ${Color.main_white};
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 1rem;
+  line-height: 1.75rem;
 `
 
 const _CopyRight = styled.span`
   display: block;
   color: ${Color.main_white};
-  font-size: 16px;
+  font-size: 0.9rem;
   text-align: center;
 `
