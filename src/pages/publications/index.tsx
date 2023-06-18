@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { styled } from '@linaria/react'
 
+import { ArticleContainer } from '@/components/template/ArticleContainer'
 import { ExternalLink } from '@/components/typography/ExternalLink'
 import { Heading } from '@/components/typography/Heading'
 import { SubHeading } from '@/components/typography/SubHeading'
@@ -20,73 +21,61 @@ export default function Publications() {
         <title>Publications｜辻村研究室｜名古屋市立大学芸術工学部</title>
       </Head>
 
-      <article>
-        <_ArticleInner>
-          <Title>Publications</Title>
-          <section>
-            <Heading>Selected Articles</Heading>
-            <SubHeading>主な研究業績</SubHeading>
-            {articlesList.map((item, index) => (
-              <_PublicationItem key={`publication${index}`}>
-                <ExternalLink link={item.link} isBold>
-                  {item.title}
-                </ExternalLink>
-                <span>{item.translation}</span>
-              </_PublicationItem>
+      <ArticleContainer>
+        <Title>Publications</Title>
+        <section>
+          <Heading>Selected Articles</Heading>
+          <SubHeading>主な研究業績</SubHeading>
+          {articlesList.map((item, index) => (
+            <_PublicationItem key={`publication${index}`}>
+              <ExternalLink link={item.link} isBold>
+                {item.title}
+              </ExternalLink>
+              <span>{item.translation}</span>
+            </_PublicationItem>
+          ))}
+        </section>
+        <section>
+          <Heading>Collaborations</Heading>
+          <SubHeading>共同研究</SubHeading>
+          <_List>
+            {collaborateList.map((item, index) => (
+              <_ListItem key={`collaborate${index}`}>
+                <ul>
+                  {item.heading}
+                  {item.content.map((subItem, subIndex) => (
+                    <_SubListItem key={`content${subIndex}`}>
+                      {subItem}
+                    </_SubListItem>
+                  ))}
+                </ul>
+              </_ListItem>
             ))}
-          </section>
-          <section>
-            <Heading>Collaborations</Heading>
-            <SubHeading>共同研究</SubHeading>
-            <_List>
-              {collaborateList.map((item, index) => (
-                <_ListItem key={`collaborate${index}`}>
-                  <ul>
-                    {item.heading}
-                    {item.content.map((subItem, subIndex) => (
-                      <_SubListItem key={`content${subIndex}`}>
-                        {subItem}
-                      </_SubListItem>
-                    ))}
-                  </ul>
-                </_ListItem>
-              ))}
-            </_List>
-          </section>
-          <section>
-            <Heading>Media Coverage</Heading>
-            <SubHeading>メディア掲載情報</SubHeading>
-            <_NewsList>
-              {mediaList.map((item, index) => (
-                <_NewsItem key={`media${index}`}>
-                  <span>{item.date}</span>
-                  <div>
-                    <p>{item.heading}</p>
-                    {item.link ? (
-                      <ExternalLink link={item.link}>{item.media}</ExternalLink>
-                    ) : (
-                      <p>{item.media}</p>
-                    )}
-                  </div>
-                </_NewsItem>
-              ))}
-            </_NewsList>
-          </section>
-        </_ArticleInner>
-      </article>
+          </_List>
+        </section>
+        <section>
+          <Heading>Media Coverage</Heading>
+          <SubHeading>メディア掲載情報</SubHeading>
+          <_NewsList>
+            {mediaList.map((item, index) => (
+              <_NewsItem key={`media${index}`}>
+                <span>{item.date}</span>
+                <div>
+                  <p>{item.heading}</p>
+                  {item.link ? (
+                    <ExternalLink link={item.link}>{item.media}</ExternalLink>
+                  ) : (
+                    <p>{item.media}</p>
+                  )}
+                </div>
+              </_NewsItem>
+            ))}
+          </_NewsList>
+        </section>
+      </ArticleContainer>
     </>
   )
 }
-
-const _ArticleInner = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-  max-width: 840px;
-  margin: 0 auto;
-  padding: 6rem 0;
-`
 
 const _PublicationItem = styled.div`
   margin: 16px 0;
