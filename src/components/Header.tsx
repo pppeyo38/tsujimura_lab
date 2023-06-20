@@ -1,16 +1,15 @@
 import { useState } from 'react'
 
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 import { css } from '@linaria/core'
 
 import { styled } from '@linaria/react'
 
+import { NavList } from '@/components/NavList'
 import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
 
 export default function Header() {
-  const router = useRouter()
   const [isNavOpen, setIsNavOpen] = useState(false)
 
   const toggleNavOpen = () => {
@@ -18,30 +17,14 @@ export default function Header() {
   }
 
   return (
-    <_Header>
+    <header className={header}>
       <_Container>
         <_HeaderInner>
           <_HeaderTitle>
             <Link href='/'>Tsujimura Lab.</Link>
           </_HeaderTitle>
           <_HeaderNav>
-            <_HeaderNavList>
-              <_HeaderNavItem isCurrent={router.pathname === '/'}>
-                <Link href='/'>Top</Link>
-              </_HeaderNavItem>
-              <_HeaderNavItem isCurrent={router.pathname === '/laboratory'}>
-                <Link href='/laboratory'>Lab Info</Link>
-              </_HeaderNavItem>
-              <_HeaderNavItem isCurrent={router.pathname === '/team'}>
-                <Link href='/team'>Team</Link>
-              </_HeaderNavItem>
-              <_HeaderNavItem isCurrent={router.pathname === '/publications'}>
-                <Link href='/publications'>Publications</Link>
-              </_HeaderNavItem>
-              <_HeaderNavItem isCurrent={router.pathname === '/equipments'}>
-                <Link href='/equipments'>Equipments</Link>
-              </_HeaderNavItem>
-            </_HeaderNavList>
+            <NavList />
           </_HeaderNav>
           <_HeaderMenuBtn onClick={() => toggleNavOpen()}>
             <_MenuBtnBar isOpen={isNavOpen} />
@@ -54,32 +37,16 @@ export default function Header() {
             } `}
           >
             <_SpHeaderNav>
-              <_HeaderNavList>
-                <_HeaderNavItem isCurrent={router.pathname === '/'}>
-                  <Link href='/'>Top</Link>
-                </_HeaderNavItem>
-                <_HeaderNavItem isCurrent={router.pathname === '/laboratory'}>
-                  <Link href='/laboratory'>Lab Info</Link>
-                </_HeaderNavItem>
-                <_HeaderNavItem isCurrent={router.pathname === '/team'}>
-                  <Link href='/team'>Team</Link>
-                </_HeaderNavItem>
-                <_HeaderNavItem isCurrent={router.pathname === '/publications'}>
-                  <Link href='/publications'>Publications</Link>
-                </_HeaderNavItem>
-                <_HeaderNavItem isCurrent={router.pathname === '/equipments'}>
-                  <Link href='/equipments'>Equipments</Link>
-                </_HeaderNavItem>
-              </_HeaderNavList>
+              <NavList />
             </_SpHeaderNav>
           </div>
         </_HeaderInner>
       </_Container>
-    </_Header>
+    </header>
   )
 }
 
-const _Header = styled.header`
+const header = css`
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -120,45 +87,6 @@ const _SpHeaderNav = styled.nav`
   @media screen and (max-width: 830px) {
     display: block;
     margin-bottom: 64px;
-  }
-`
-
-const _HeaderNavList = styled.ol`
-  display: flex;
-  gap: 24px;
-
-  @media screen and (max-width: 830px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`
-
-const _HeaderNavItem = styled.li<{ isCurrent: boolean }>`
-  a {
-    position: relative;
-    font-family: ${FontFamily.nunito_sans};
-    font-weight: ${FontWeight.bold};
-    font-size: 1.1rem;
-    line-height: 1.75rem;
-    letter-spacing: 0.05rem;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: ${Color.main_black};
-      transition: all 0.3s;
-      transform: ${(props) =>
-        props.isCurrent ? 'scale(1, 1)' : 'scale(0, 1)'};
-      transform-origin: center top;
-    }
-
-    &:hover::after {
-      transform: scale(1, 1);
-    }
   }
 `
 
