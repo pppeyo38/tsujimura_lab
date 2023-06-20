@@ -7,14 +7,15 @@ type Props = {
 }
 
 export const Text = ({ children }: Props) => {
-  return <p className={`${textStyle} ${marginY}`}>{children}</p>
+  return <p className={text}>{children}</p>
 }
 
-export const textStyle = css`
-  font-size: 1rem;
-  line-height: 1.75rem;
-`
+export const textStyle = {
+  fontSize: '1rem',
+  lineHeight: '1.75rem'
+}
 
-const marginY = css`
+const text = css`
+  ${textStyle};
   margin: 20px 0;
 `

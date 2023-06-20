@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { styled } from '@linaria/react'
+import { css } from '@linaria/core'
 
 import { ArticleContainer } from '@/components/template/ArticleContainer'
 import { ExternalLink } from '@/components/typography/ExternalLink'
@@ -29,12 +29,14 @@ export default function Research() {
             <tbody>
               {memberList.map((item, index) => (
                 <tr key={index}>
-                  <_TableHead>{item.head}</_TableHead>
-                  <_TableData>
+                  <th className={tHead}>{item.head}</th>
+                  <td className={tData}>
                     {item.data.map((data, index) => (
-                      <_NameWrap key={index}>{data}</_NameWrap>
+                      <span key={index} className={nameWrap}>
+                        {data}
+                      </span>
                     ))}
-                  </_TableData>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -55,17 +57,17 @@ const tabelCell = {
   lineHeight: '1.75rem'
 }
 
-const _TableHead = styled.th`
+const tHead = css`
   ${tabelCell}
   width: 160px;
 `
 
-const _TableData = styled.td`
+const tData = css`
   ${tabelCell}
   word-break: keep-all;
 `
 
-const _NameWrap = styled.span`
+const nameWrap = css`
   display: inline-flex;
 
   :not(:last-child) {

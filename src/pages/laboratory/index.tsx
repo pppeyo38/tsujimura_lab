@@ -1,11 +1,11 @@
 import Head from 'next/head'
 
-import { styled } from '@linaria/react'
+import { css } from '@linaria/core'
 
 import { ArticleContainer } from '@/components/template/ArticleContainer'
 import { Heading } from '@/components/typography/Heading'
 import { SubHeading } from '@/components/typography/SubHeading'
-import { Text } from '@/components/typography/Text'
+import { Text, textStyle } from '@/components/typography/Text'
 import { Title } from '@/components/typography/Title'
 
 export default function Research() {
@@ -43,17 +43,17 @@ export default function Research() {
         <section>
           <Heading>Student research and projects</Heading>
           <SubHeading>実験心理学・脳神経科学</SubHeading>
-          <_List>
-            <_ListItem>
+          <ul className={list}>
+            <li className={listItem}>
               メラノプシン神経節細胞の瞳孔径路への寄与の解明
-            </_ListItem>
-            <_ListItem>
+            </li>
+            <li className={listItem}>
               色、輝度情報とメラノプシン神経節細胞との機能的関連性
-            </_ListItem>
-            <_ListItem>光環境が概日リズムに及ぼす影響の解明</_ListItem>
-            <_ListItem>ヒトの色の知覚メカニズムの解明</_ListItem>
-            <_ListItem>ヒトの明るさ知覚メカニズムの解明</_ListItem>
-          </_List>
+            </li>
+            <li className={listItem}>光環境が概日リズムに及ぼす影響の解明</li>
+            <li className={listItem}>ヒトの色の知覚メカニズムの解明</li>
+            <li className={listItem}>ヒトの明るさ知覚メカニズムの解明</li>
+          </ul>
         </section>
         <section>
           <Heading>Our recent activities</Heading>
@@ -68,15 +68,14 @@ export default function Research() {
   )
 }
 
-const _List = styled.ul`
+const list = css`
   margin: 20px 0;
 `
 
-const _ListItem = styled.li`
+const listItem = css`
   position: relative;
   padding-inline-start: 20px;
-  font-size: 1rem;
-  line-height: 1.75rem;
+  ${textStyle}
 
   &:before {
     content: '・';

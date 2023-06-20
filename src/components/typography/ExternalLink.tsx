@@ -1,7 +1,8 @@
 import { ReactNode } from 'react'
 
-import { styled } from '@linaria/react'
+import { css } from '@linaria/core'
 
+import { textStyle } from '@/components/typography/Text'
 import { Color, FontWeight } from '@/styles/StyleToken'
 
 type Props = {
@@ -12,22 +13,29 @@ type Props = {
 
 export const ExternalLink = ({ children, link, isBold }: Props) => {
   return (
-    <_Link href={link} target='_blank' rel='noopener' isBold={isBold}>
+    <a
+      href={link}
+      target='_blank'
+      rel='noopener'
+      className={`${exLink} ${isBold && linkBold}`}
+    >
       {children}
-    </_Link>
+    </a>
   )
 }
 
-const _Link = styled.a<{ isBold: boolean | undefined }>`
+const exLink = css`
   display: inline-block;
-  font-weight: ${(props) =>
-    props.isBold ? FontWeight.bold : FontWeight.regular};
-  font-size: 1rem;
-  line-height: 1.75rem;
+  font-weight: ${FontWeight.regular};
+  ${textStyle};
   text-decoration: underline;
   transition: 0.2s;
 
   &:hover {
     color: ${Color.main_grey};
   }
+`
+
+const linkBold = css`
+  font-weight: ${FontWeight.bold};
 `

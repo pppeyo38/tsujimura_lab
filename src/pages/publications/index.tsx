@@ -1,11 +1,12 @@
 import Head from 'next/head'
 
-import { styled } from '@linaria/react'
+import { css } from '@linaria/core'
 
 import { ArticleContainer } from '@/components/template/ArticleContainer'
 import { ExternalLink } from '@/components/typography/ExternalLink'
 import { Heading } from '@/components/typography/Heading'
 import { SubHeading } from '@/components/typography/SubHeading'
+import { textStyle } from '@/components/typography/Text'
 import { Title } from '@/components/typography/Title'
 import {
   articlesList,
@@ -26,39 +27,41 @@ export default function Publications() {
         <section>
           <Heading>Selected Articles</Heading>
           <SubHeading>主な研究業績</SubHeading>
-          {articlesList.map((item, index) => (
-            <_PublicationItem key={`publication${index}`}>
-              <ExternalLink link={item.link} isBold>
-                {item.title}
-              </ExternalLink>
-              <span>{item.translation}</span>
-            </_PublicationItem>
-          ))}
+          <ul className={listStyle}>
+            {articlesList.map((item, index) => (
+              <li key={`publication${index}`}>
+                <ExternalLink link={item.link} isBold>
+                  {item.title}
+                </ExternalLink>
+                <span className={translate}>{item.translation}</span>
+              </li>
+            ))}
+          </ul>
         </section>
         <section>
           <Heading>Collaborations</Heading>
           <SubHeading>共同研究</SubHeading>
-          <_List>
+          <ul className={listStyle}>
             {collaborateList.map((item, index) => (
-              <_ListItem key={`collaborate${index}`}>
+              <li key={`collaborate${index}`} className={clListItem}>
                 <ul>
                   {item.heading}
                   {item.content.map((subItem, subIndex) => (
-                    <_SubListItem key={`content${subIndex}`}>
+                    <li key={`content${subIndex}`} className={clSubListItem}>
                       {subItem}
-                    </_SubListItem>
+                    </li>
                   ))}
                 </ul>
-              </_ListItem>
+              </li>
             ))}
-          </_List>
+          </ul>
         </section>
         <section>
           <Heading>Media Coverage</Heading>
           <SubHeading>メディア掲載情報</SubHeading>
-          <_NewsList>
+          <ul className={listStyle}>
             {mediaList.map((item, index) => (
-              <_NewsItem key={`media${index}`}>
+              <li key={`media${index}`} className={newsItem}>
                 <span>{item.date}</span>
                 <div>
                   <p>{item.heading}</p>
@@ -68,39 +71,34 @@ export default function Publications() {
                     <p>{item.media}</p>
                   )}
                 </div>
-              </_NewsItem>
+              </li>
             ))}
-          </_NewsList>
+          </ul>
         </section>
       </ArticleContainer>
     </>
   )
 }
 
-const _PublicationItem = styled.div`
-  margin: 16px 0;
-
-  span {
-    display: inline-block;
-    color: rgba(33, 33, 33, 0.6);
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-`
-
-const _List = styled.ul`
+const listStyle = css`
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin: 20px 0;
 `
 
-const _ListItem = styled.li`
+const translate = css`
+  display: inline-block;
+  color: rgba(33, 33, 33, 0.6);
+  font-size: 1rem;
+  line-height: 1.25rem;
+`
+
+const clListItem = css`
   position: relative;
   padding-inline-start: 20px;
   font-weight: ${FontWeight.bold};
-  font-size: 1rem;
-  line-height: 1.75rem;
+  ${textStyle};
 
   &:before {
     content: '・';
@@ -110,12 +108,11 @@ const _ListItem = styled.li`
   }
 `
 
-const _SubListItem = styled.li`
+const clSubListItem = css`
   position: relative;
   padding-inline-start: 20px;
   font-weight: ${FontWeight.regular};
-  font-size: 1rem;
-  line-height: 1.75rem;
+  ${textStyle};
 
   &:before {
     content: '・';
@@ -125,16 +122,9 @@ const _SubListItem = styled.li`
   }
 `
 
-const _NewsList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 32px;
-`
-
-const _NewsItem = styled.li`
+const newsItem = css`
   display: inline-flex;
-  line-height: 1.75rem;
+  ${textStyle};
 
   span {
     display: inline-block;

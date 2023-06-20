@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { styled } from '@linaria/react'
+import { css } from '@linaria/core'
 
 type Props = {
   children: ReactNode
@@ -9,12 +9,12 @@ type Props = {
 export const ArticleContainer = ({ children }: Props) => {
   return (
     <article>
-      <_ArticleInner>{children}</_ArticleInner>
+      <div className={inner}>{children}</div>
     </article>
   )
 }
 
-const _ArticleInner = styled.div`
+const inner = css`
   display: flex;
   flex-direction: column;
   gap: 40px;
