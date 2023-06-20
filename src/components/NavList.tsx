@@ -1,40 +1,29 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 import { css } from '@linaria/core'
 
 import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
 
-export const NavList = () => {
-  const router = useRouter()
+type Props = {
+  path: string
+}
 
+export const NavList = ({ path }: Props) => {
   return (
     <ol className={list}>
-      <li className={`${listItem} ${router.pathname === '/' && isCurrent}`}>
+      <li className={`${listItem} ${path === '/' && isCurrent}`}>
         <Link href='/'>Top</Link>
       </li>
-      <li
-        className={`${listItem} ${
-          router.pathname === '/laboratory' && isCurrent
-        }`}
-      >
+      <li className={`${listItem} ${path === '/laboratory' && isCurrent}`}>
         <Link href='/laboratory'>Lab Info</Link>
       </li>
-      <li className={`${listItem} ${router.pathname === '/team' && isCurrent}`}>
+      <li className={`${listItem} ${path === '/team' && isCurrent}`}>
         <Link href='/team'>Team</Link>
       </li>
-      <li
-        className={`${listItem} ${
-          router.pathname === '/publications' && isCurrent
-        }`}
-      >
+      <li className={`${listItem} ${path === '/publications' && isCurrent}`}>
         <Link href='/publications'>Publications</Link>
       </li>
-      <li
-        className={`${listItem} ${
-          router.pathname === '/equipments' && isCurrent
-        }`}
-      >
+      <li className={`${listItem} ${path === '/equipments' && isCurrent}`}>
         <Link href='/equipments'>Equipments</Link>
       </li>
     </ol>
@@ -80,7 +69,7 @@ const listItem = css`
 `
 
 const isCurrent = css`
-  &::after {
+  a::after {
     transform: scale(1, 1);
   }
 `

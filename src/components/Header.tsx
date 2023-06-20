@@ -1,47 +1,47 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { css } from '@linaria/core'
-
-import { styled } from '@linaria/react'
 
 import { NavList } from '@/components/NavList'
 import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false)
+  const router = useRouter()
 
   const toggleNavOpen = () => {
     setIsNavOpen(!isNavOpen)
   }
 
+  useEffect(() => {
+    setIsNavOpen(false)
+  }, [router.pathname])
+
   return (
     <header className={header}>
-      <_Container>
-        <_HeaderInner>
-          <_HeaderTitle>
+      <div className={container}>
+        <div className={headerInner}>
+          <h1 className={headerTitle}>
             <Link href='/'>Tsujimura Lab.</Link>
-          </_HeaderTitle>
-          <_HeaderNav>
-            <NavList />
-          </_HeaderNav>
-          <_HeaderMenuBtn onClick={() => toggleNavOpen()}>
-            <_MenuBtnBar isOpen={isNavOpen} />
-            <_MenuBtnBar isOpen={isNavOpen} />
-            <_MenuBtnBar isOpen={isNavOpen} />
-          </_HeaderMenuBtn>
-          <div
-            className={`${spNavMenuWrap} ${
-              isNavOpen ? navFadeIn : navFadeOut
-            } `}
-          >
-            <_SpHeaderNav>
-              <NavList />
-            </_SpHeaderNav>
+          </h1>
+          <nav className={headerNavPc}>
+            <NavList path={router.pathname} />
+          </nav>
+          <button className={headerMenuBtn} onClick={() => toggleNavOpen()}>
+            <span className={`${menuBtnBar} ${isNavOpen && isMenuOpen}`} />
+            <span className={`${menuBtnBar} ${isNavOpen && isMenuOpen}`} />
+            <span className={`${menuBtnBar} ${isNavOpen && isMenuOpen}`} />
+          </button>
+          <div className={`${spNavWrap} ${isNavOpen && navActive} `}>
+            <nav className={headerNavSp}>
+              <NavList path={router.pathname} />
+            </nav>
           </div>
-        </_HeaderInner>
-      </_Container>
+        </div>
+      </div>
     </header>
   )
 }
@@ -53,20 +53,20 @@ const header = css`
   background: #fff;
 `
 
-const _Container = styled.div`
+const container = css`
   max-width: 1200px;
   padding: 0 40px;
   margin: 0 auto;
 `
 
-const _HeaderInner = styled.div`
+const headerInner = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 64px;
 `
 
-const _HeaderTitle = styled.div`
+const headerTitle = css`
   a {
     font-family: ${FontFamily.nunito_sans};
     font-weight: ${FontWeight.black};
@@ -75,13 +75,13 @@ const _HeaderTitle = styled.div`
   }
 `
 
-const _HeaderNav = styled.nav`
+const headerNavPc = css`
   @media screen and (max-width: 830px) {
     display: none;
   }
 `
 
-const _SpHeaderNav = styled.nav`
+const headerNavSp = css`
   display: none;
 
   @media screen and (max-width: 830px) {
@@ -90,7 +90,7 @@ const _SpHeaderNav = styled.nav`
   }
 `
 
-const _HeaderMenuBtn = styled.button`
+const headerMenuBtn = css`
   display: none;
 
   @media screen and (max-width: 830px) {
@@ -101,7 +101,7 @@ const _HeaderMenuBtn = styled.button`
   }
 `
 
-const _MenuBtnBar = styled.span<{ isOpen: boolean }>`
+const menuBtnBar = css`
   position: absolute;
   display: block;
   left: 0;
@@ -112,23 +112,33 @@ const _MenuBtnBar = styled.span<{ isOpen: boolean }>`
 
   &:nth-child(1) {
     top: 0;
-    transform: ${(props) =>
-      props.isOpen ? 'translateY(8px) rotate(45deg)' : ''};
   }
 
   &:nth-child(2) {
     top: 8px;
-    opacity: ${(props) => (props.isOpen ? '0' : '1')};
+    opacity: 1;
   }
 
   &:last-child {
     top: 16px;
-    transform: ${(props) =>
-      props.isOpen ? 'translateY(-8px) rotate(-45deg)' : ''};
   }
 `
 
-const spNavMenuWrap = css`
+const isMenuOpen = css`
+  &:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  &:nth-child(2) {
+    opacity: 0;
+  }
+
+  &:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+`
+
+const spNavWrap = css`
   display: none;
 
   @media screen and (max-width: 830px) {
@@ -142,39 +152,18 @@ const spNavMenuWrap = css`
     height: calc(100svh - 64px);
     background-color: ${Color.main_white};
     opacity: 0;
+    transform: translateY(-10px);
+    transition-property: opacity, transform;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    pointer-events: none;
   }
 `
 
-const navFadeIn = css`
-  @keyframes FadeIn {
-    0% {
-      opacity: 0;
-      z-index: -1;
-    }
-    100% {
-      opacity: 1;
-      z-index: 1;
-    }
-  }
-
+const navActive = css`
   @media screen and (max-width: 830px) {
-    animation: FadeIn 0.4s forwards;
-  }
-`
-
-const navFadeOut = css`
-  @keyframes FadeOut {
-    0% {
-      opacity: 1;
-      z-index: 1;
-    }
-    100% {
-      opacity: 0;
-      z-index: -1;
-    }
-  }
-
-  @media screen and (max-width: 830px) {
-    animation: FadeOut 0.4s forwards;
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: auto;
   }
 `
