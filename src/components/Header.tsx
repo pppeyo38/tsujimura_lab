@@ -29,8 +29,8 @@ export default function Header() {
               <_HeaderNavItem isCurrent={router.pathname === '/publications'}>
                 <Link href='/publications'>Publications</Link>
               </_HeaderNavItem>
-              <_HeaderNavItem isCurrent={router.pathname === '/equipment'}>
-                <Link href='/equipment'>Equipment</Link>
+              <_HeaderNavItem isCurrent={router.pathname === '/equipments'}>
+                <Link href='/equipments'>Equipments</Link>
               </_HeaderNavItem>
             </_HeaderNav>
           </nav>
