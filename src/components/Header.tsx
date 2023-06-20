@@ -46,6 +46,27 @@ export default function Header() {
             <_MenuBtnBar isOpen={isNavOpen} />
             <_MenuBtnBar isOpen={isNavOpen} />
           </_HeaderMenuBtn>
+          <_SpNavMenuWrap isOpen={isNavOpen}>
+            <_SpHeaderNav>
+              <_HeaderNavList>
+                <_HeaderNavItem isCurrent={router.pathname === '/'}>
+                  <Link href='/'>Top</Link>
+                </_HeaderNavItem>
+                <_HeaderNavItem isCurrent={router.pathname === '/laboratory'}>
+                  <Link href='/laboratory'>Lab Info</Link>
+                </_HeaderNavItem>
+                <_HeaderNavItem isCurrent={router.pathname === '/team'}>
+                  <Link href='/team'>Team</Link>
+                </_HeaderNavItem>
+                <_HeaderNavItem isCurrent={router.pathname === '/publications'}>
+                  <Link href='/publications'>Publications</Link>
+                </_HeaderNavItem>
+                <_HeaderNavItem isCurrent={router.pathname === '/equipments'}>
+                  <Link href='/equipments'>Equipments</Link>
+                </_HeaderNavItem>
+              </_HeaderNavList>
+            </_SpHeaderNav>
+          </_SpNavMenuWrap>
         </_HeaderInner>
       </_Container>
     </_Header>
@@ -87,9 +108,23 @@ const _HeaderNav = styled.nav`
   }
 `
 
+const _SpHeaderNav = styled.nav`
+  display: none;
+
+  @media screen and (max-width: 830px) {
+    display: block;
+    margin-bottom: 64px;
+  }
+`
+
 const _HeaderNavList = styled.ol`
   display: flex;
   gap: 24px;
+
+  @media screen and (max-width: 830px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const _HeaderNavItem = styled.li<{ isCurrent: boolean }>`
@@ -156,5 +191,23 @@ const _MenuBtnBar = styled.span<{ isOpen: boolean }>`
     top: 16px;
     transform: ${(props) =>
       props.isOpen ? 'translateY(-8px) rotate(-45deg)' : ''};
+  }
+`
+
+const _SpNavMenuWrap = styled.div<{ isOpen: boolean }>`
+  display: none;
+
+  @media screen and (max-width: 830px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: calc(100svh - 64px);
+    background-color: ${Color.main_white};
+    transform: ${(props) =>
+      props.isOpen ? 'translateY(calc(0% + 64px))' : 'translateY(-120%)'};
+    transition: all 0.8s;
   }
 `
