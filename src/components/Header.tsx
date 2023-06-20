@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -7,6 +9,11 @@ import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
 
 export default function Header() {
   const router = useRouter()
+  const [isNavOpen, setIsNavOpen] = useState(false)
+
+  const toggleNavOpen = () => {
+    setIsNavOpen(!isNavOpen)
+  }
 
   return (
     <_Header>
@@ -15,8 +22,8 @@ export default function Header() {
           <_HeaderTitle>
             <Link href='/'>Tsujimura Lab.</Link>
           </_HeaderTitle>
-          <nav>
-            <_HeaderNav>
+          <_HeaderNav>
+            <_HeaderNavList>
               <_HeaderNavItem isCurrent={router.pathname === '/'}>
                 <Link href='/'>Top</Link>
               </_HeaderNavItem>
@@ -32,8 +39,13 @@ export default function Header() {
               <_HeaderNavItem isCurrent={router.pathname === '/equipments'}>
                 <Link href='/equipments'>Equipments</Link>
               </_HeaderNavItem>
-            </_HeaderNav>
-          </nav>
+            </_HeaderNavList>
+          </_HeaderNav>
+          <_HeaderMenuBtn onClick={() => toggleNavOpen()}>
+            <_MenuBtnBar isOpen={isNavOpen} />
+            <_MenuBtnBar isOpen={isNavOpen} />
+            <_MenuBtnBar isOpen={isNavOpen} />
+          </_HeaderMenuBtn>
         </_HeaderInner>
       </_Container>
     </_Header>
@@ -69,7 +81,13 @@ const _HeaderTitle = styled.div`
   }
 `
 
-const _HeaderNav = styled.ol`
+const _HeaderNav = styled.nav`
+  @media screen and (max-width: 830px) {
+    display: none;
+  }
+`
+
+const _HeaderNavList = styled.ol`
   display: flex;
   gap: 24px;
 `
@@ -100,5 +118,43 @@ const _HeaderNavItem = styled.li<{ isCurrent: boolean }>`
     &:hover::after {
       transform: scale(1, 1);
     }
+  }
+`
+
+const _HeaderMenuBtn = styled.button`
+  display: none;
+
+  @media screen and (max-width: 830px) {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 16px;
+  }
+`
+
+const _MenuBtnBar = styled.span<{ isOpen: boolean }>`
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background-color: ${Color.main_black};
+  transition: all 0.4s;
+
+  &:nth-child(1) {
+    top: 0;
+    transform: ${(props) =>
+      props.isOpen ? 'translateY(8px) rotate(45deg)' : ''};
+  }
+
+  &:nth-child(2) {
+    top: 8px;
+    opacity: ${(props) => (props.isOpen ? '0' : '1')};
+  }
+
+  &:last-child {
+    top: 16px;
+    transform: ${(props) =>
+      props.isOpen ? 'translateY(-8px) rotate(-45deg)' : ''};
   }
 `
