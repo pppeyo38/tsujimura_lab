@@ -3,6 +3,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+import { css } from '@linaria/core'
+
 import { styled } from '@linaria/react'
 
 import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
@@ -46,7 +48,11 @@ export default function Header() {
             <_MenuBtnBar isOpen={isNavOpen} />
             <_MenuBtnBar isOpen={isNavOpen} />
           </_HeaderMenuBtn>
-          <_SpNavMenuWrap isOpen={isNavOpen}>
+          <div
+            className={`${spNavMenuWrap} ${
+              isNavOpen ? navFadeIn : navFadeOut
+            } `}
+          >
             <_SpHeaderNav>
               <_HeaderNavList>
                 <_HeaderNavItem isCurrent={router.pathname === '/'}>
@@ -66,7 +72,7 @@ export default function Header() {
                 </_HeaderNavItem>
               </_HeaderNavList>
             </_SpHeaderNav>
-          </_SpNavMenuWrap>
+          </div>
         </_HeaderInner>
       </_Container>
     </_Header>
@@ -194,20 +200,53 @@ const _MenuBtnBar = styled.span<{ isOpen: boolean }>`
   }
 `
 
-const _SpNavMenuWrap = styled.div<{ isOpen: boolean }>`
+const spNavMenuWrap = css`
   display: none;
 
   @media screen and (max-width: 830px) {
     position: fixed;
-    top: 0;
+    top: 64px;
     left: 0;
+    z-index: -1;
     display: grid;
     place-content: center;
     width: 100%;
     height: calc(100svh - 64px);
     background-color: ${Color.main_white};
-    transform: ${(props) =>
-      props.isOpen ? 'translateY(calc(0% + 64px))' : 'translateY(-120%)'};
-    transition: all 0.8s;
+    opacity: 0;
+  }
+`
+
+const navFadeIn = css`
+  @keyframes FadeIn {
+    0% {
+      opacity: 0;
+      z-index: -1;
+    }
+    100% {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+
+  @media screen and (max-width: 830px) {
+    animation: FadeIn 0.4s forwards;
+  }
+`
+
+const navFadeOut = css`
+  @keyframes FadeOut {
+    0% {
+      opacity: 1;
+      z-index: 1;
+    }
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  @media screen and (max-width: 830px) {
+    animation: FadeOut 0.4s forwards;
   }
 `
