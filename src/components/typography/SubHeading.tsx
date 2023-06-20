@@ -1,21 +1,23 @@
 import { ReactNode } from 'react'
 
-import { styled } from '@linaria/react'
+import { css } from '@linaria/core'
 
-import { FontFamily, FontWeight } from '@/styles/StyleToken'
+import { FontWeight } from '@/styles/StyleToken'
 
 type Props = {
   children: ReactNode
 }
 
 export const SubHeading = ({ children }: Props) => {
-  return <_SubHeading>{children}</_SubHeading>
+  return <h3 className={`${subHeadingStyle} ${marginBtm}`}>{children}</h3>
 }
 
-const _SubHeading = styled.h3`
-  margin-bottom: 16px;
+export const subHeadingStyle = css`
   font-weight: ${FontWeight.bold};
-  font-family: ${FontFamily.zenkaku_gothic};
   font-size: 1.3125rem;
   line-height: 1.75rem;
+`
+
+const marginBtm = css`
+  margin-bottom: 16px;
 `

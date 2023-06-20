@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { styled } from '@linaria/react'
+import { css } from '@linaria/core'
 
 import { FontFamily, FontWeight } from '@/styles/StyleToken'
 
@@ -9,10 +9,10 @@ type Props = {
 }
 
 export const Heading = ({ children }: Props) => {
-  return <_Heading>{children}</_Heading>
+  return <h2 className={heading}>{children}</h2>
 }
 
-const _Heading = styled.h2`
+const heading = css`
   margin-bottom: 24px;
   padding: 2px 8px;
   background-color: #d8ebf0;

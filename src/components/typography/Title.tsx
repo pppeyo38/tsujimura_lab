@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { styled } from '@linaria/react'
+import { css } from '@linaria/core'
 
 import { FontFamily, FontWeight } from '@/styles/StyleToken'
 
@@ -9,10 +9,10 @@ type Props = {
 }
 
 export const Title = ({ children }: Props) => {
-  return <_Title>{children}</_Title>
+  return <h1 className={title}>{children}</h1>
 }
 
-const _Title = styled.h1`
+const title = css`
   margin-bottom: 0.83em;
   font-weight: ${FontWeight.bold};
   font-family: ${FontFamily.nunito_sans};

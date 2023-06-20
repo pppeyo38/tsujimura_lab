@@ -1,20 +1,20 @@
 import { ReactNode } from 'react'
 
-import { styled } from '@linaria/react'
-
-import { FontFamily } from '@/styles/StyleToken'
+import { css } from '@linaria/core'
 
 type Props = {
   children: ReactNode
 }
 
 export const Text = ({ children }: Props) => {
-  return <_Text>{children}</_Text>
+  return <p className={`${textStyle} ${marginY}`}>{children}</p>
 }
 
-const _Text = styled.p`
-  margin: 20px 0;
-  font-family: ${FontFamily.zenkaku_gothic};
+export const textStyle = css`
   font-size: 1rem;
   line-height: 1.75rem;
+`
+
+const marginY = css`
+  margin: 20px 0;
 `
