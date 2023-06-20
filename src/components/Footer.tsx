@@ -30,7 +30,7 @@ const _Footer = styled.footer`
 
 const _Container = styled.div`
   max-width: 1200px;
-  padding: 32px 0 20px;
+  padding: 32px 40px 20px;
   margin: 0 auto;
 `
 

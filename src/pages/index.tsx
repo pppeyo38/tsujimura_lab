@@ -85,7 +85,7 @@ const _ArticleContainer = styled.article`
 `
 
 const _NewsSection = styled.section`
-  width: 100%;
+  width: 88%;
   max-width: 840px;
   margin: 0 auto;
 `
