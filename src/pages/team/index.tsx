@@ -5,8 +5,10 @@ import { css } from '@linaria/core'
 import { ArticleContainer } from '@/components/template/ArticleContainer'
 import { ExternalLink } from '@/components/typography/ExternalLink'
 import { Heading } from '@/components/typography/Heading'
+import { textStyle } from '@/components/typography/Text'
 import { Title } from '@/components/typography/Title'
 import { memberList } from '@/content/team'
+import { FontWeight } from '@/styles/StyleToken'
 
 export default function Research() {
   return (
@@ -25,50 +27,66 @@ export default function Research() {
         </section>
         <section>
           <Heading>Staffs and students</Heading>
-          <table>
-            <tbody>
-              {memberList.map((item, index) => (
-                <tr key={index}>
-                  <th className={tHead}>{item.head}</th>
-                  <td className={tData}>
-                    {item.data.map((data, index) => (
-                      <span key={index} className={nameWrap}>
-                        {data}
-                      </span>
-                    ))}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div>
+            {memberList.map((item, index) => (
+              <div key={index} className={memberRow}>
+                <h3 className={memberRole}>{item.head}</h3>
+                <ul className={memberListWrap}>
+                  {item.data.map((data, index) => (
+                    <li key={index} className={nameWrap}>
+                      {data}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </section>
       </ArticleContainer>
     </>
   )
 }
 
-const tabelCell = {
-  padding: '1.2rem 0',
-  borderTop: '1px',
-  borderBottom: '1px',
-  borderStyle: 'solid',
-  borderColor: 'rgba(33, 33, 33, 0.4)',
-  fontSize: '1rem',
-  lineHeight: '1.75rem'
-}
+const memberRow = css`
+  display: flex;
+  align-self: flex-start;
+  padding: 0.8rem 0;
+  border-style: solid;
+  border-color: rgba(33, 33, 33, 0.4);
+  border-width: 0 0 1px;
 
-const tHead = css`
-  ${tabelCell}
-  width: 160px;
+  &:first-child {
+    border-width: 1px 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `
 
-const tData = css`
-  ${tabelCell}
-  word-break: keep-all;
+const memberRole = css`
+  width: 25%;
+  ${textStyle}
+  font-weight: ${FontWeight.bold};
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+`
+
+const memberListWrap = css`
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 `
 
 const nameWrap = css`
   display: inline-flex;
+  ${textStyle}
 
   :not(:last-child) {
     margin-right: 0.5em;
