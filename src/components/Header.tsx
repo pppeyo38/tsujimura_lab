@@ -51,12 +51,17 @@ const header = css`
   z-index: 100;
   width: 100%;
   background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 `
 
 const container = css`
   max-width: 1200px;
   padding: 0 40px;
   margin: 0 auto;
+
+  @media screen and (max-width: 830px) {
+    padding: 0 20px;
+  }
 `
 
 const headerInner = css`

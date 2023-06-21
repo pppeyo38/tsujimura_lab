@@ -24,7 +24,7 @@ export default function Research() {
         </section>
         <section>
           <Heading>Research</Heading>
-          <SubHeading>メラノプシン神経節細胞(ipRGC)の研究</SubHeading>
+          <SubHeading>メラノプシン神経節細胞の研究</SubHeading>
           <Text>
             私たちは、色や明るさなどの感覚知覚情報処理と高次脳機能との関連性に着目しています。加えて、脳内で外界の光信号の符号化に関し重要な役割を担っているメラノプシン神経節細胞（intrinsically
             photosensitive retinal ganglion cell:
@@ -41,7 +41,7 @@ export default function Research() {
           </Text>
         </section>
         <section>
-          <Heading>Student research and projects</Heading>
+          <Heading>Student research</Heading>
           <SubHeading>実験心理学・脳神経科学</SubHeading>
           <ul className={list}>
             <li className={listItem}>

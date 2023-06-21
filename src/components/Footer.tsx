@@ -13,7 +13,9 @@ export default function Footer() {
             辻村誠一研究室
           </h2>
           <address className={footerAddress}>
-            〒464-0083 愛知県名古屋市千種区北千種2丁目1番10号
+            〒464-0083 愛知県名古屋市千種区
+            <br className={spOnlyBr} />
+            北千種2丁目1番10号
             <br />
             TEL:052-721-1225 (代) FAX:052-721-3110
           </address>
@@ -33,6 +35,10 @@ const container = css`
   max-width: 1200px;
   padding: 32px 40px 20px;
   margin: 0 auto;
+
+  @media screen and (max-width: 830px) {
+    padding: 32px 20px 20px;
+  }
 `
 
 const inner = css`
@@ -57,6 +63,14 @@ const footerSubName = css`
 const footerAddress = css`
   color: ${Color.main_white};
   ${textStyle};
+`
+
+const spOnlyBr = css`
+  display: none;
+
+  @media screen and (max-width: 424px) {
+    display: block;
+  }
 `
 
 const copyRight = css`
