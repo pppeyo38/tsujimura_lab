@@ -75,6 +75,7 @@ const itemBlock = css`
 
     h2 {
       grid-column: 1;
+      margin-bottom: 0;
     }
   }
 `
