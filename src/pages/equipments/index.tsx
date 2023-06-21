@@ -54,19 +54,27 @@ export default function Equipments() {
 }
 
 const imageBlock = css`
-  width: 405px;
-  height: 270px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
   margin-bottom: 16px;
   background-color: gray;
 `
 
 const itemBlock = css`
   display: grid;
-  grid-template-columns: 1fr 405px;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 0 20px;
 
   h2 {
     grid-column: 1/3;
+  }
+
+  @media screen and (max-width: 750px) {
+    grid-template-columns: 1fr;
+
+    h2 {
+      grid-column: 1;
+    }
   }
 `
