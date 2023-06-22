@@ -7,6 +7,7 @@ import { Heading } from '@/components/typography/Heading'
 import { SubHeading } from '@/components/typography/SubHeading'
 import { Text, textStyle } from '@/components/typography/Text'
 import { Title } from '@/components/typography/Title'
+import { equipmentsList } from '@/content/equipments'
 
 export default function Research() {
   return (
@@ -63,6 +64,18 @@ export default function Research() {
             ロボットキットを利用してディープラーニングを勉強しました。以下の動画は、衝突回避走行デモを用いて落下回避と衝突回避を学習させて試走させた時のものです。
           </Text>
         </section>
+        <section>
+          <Heading>Equipments</Heading>
+          {equipmentsList.map((item, index) => (
+            <div key={index} className={itemBlock}>
+              <div>
+                <SubHeading>{item.name}</SubHeading>
+                <Text>{item.detail}</Text>
+              </div>
+              <div className={imageBlock} />
+            </div>
+          ))}
+        </section>
       </ArticleContainer>
     </>
   )
@@ -84,4 +97,22 @@ const listItem = css`
     left: 0;
     transform: translateY(-50%);
   }
+`
+
+const itemBlock = css`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0 20px;
+  padding: 16px 0;
+
+  @media screen and (max-width: 750px) {
+    grid-template-columns: 1fr;
+  }
+`
+
+const imageBlock = css`
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background-color: gray;
 `
