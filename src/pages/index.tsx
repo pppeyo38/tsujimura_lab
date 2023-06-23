@@ -28,25 +28,23 @@ export default function Home() {
           <Heading>News</Heading>
           <ul className={newsList}>
             <li className={newsItem}>
+              <a
+                href='https://www.nagoya-cu.ac.jp/media/20230621press.pdf'
+                target='_blank'
+                rel='noopener'
+              >
+                <span>2023/06/22</span>
+                <p>
+                  特殊な照明光を用いることによってヒトのコントラスト（文字や画像の濃淡）感度を改善することを発見
+                </p>
+              </a>
+            </li>
+            <li className={newsItem}>
               <Link href='/'>
-                <span>2022/05/15</span>
+                <span>2023/06/22</span>
                 <p>
                   ホームページをリニューアルしました。進学や研究室配属などに役立ててください。
                 </p>
-              </Link>
-            </li>
-            <li className={newsItem}>
-              <Link href='/'>
-                <span>2021/02/16</span>
-                <p>
-                  本研究室学部4年生の伊藤登萌さんと中山智恵さんが2020年度色彩検定において1級に合格しました。
-                </p>
-              </Link>
-            </li>
-            <li className={newsItem}>
-              <Link href='/'>
-                <span>2017/09/06-09</span>
-                <p>辻村教授が国際瞳孔学会でLoewenfeld記念講演を行いました。</p>
               </Link>
             </li>
           </ul>

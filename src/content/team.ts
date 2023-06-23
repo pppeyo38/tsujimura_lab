@@ -1,18 +1,14 @@
 export const memberList = [
   {
-    head: '研究員',
+    head: '日本学術振興会特別研究員',
     data: ['齋藤 真里菜 / Marina Saito']
-  },
-  {
-    head: '研究補助員',
-    data: ['藤田 優之 / Yuno Hujita', '若松 夏芽 / Natsume Wakamatsu']
   },
   {
     head: '大学院修士課程',
     data: ['藤田 優之 / Yuno Hujita']
   },
   {
-    head: '学部',
+    head: 'B4',
     data: [
       '岩崎 百花 / Momoka Iwasaki',
       '嬉野 友妃菜 / Yukina Ureshino',
@@ -22,6 +18,10 @@ export const memberList = [
       '三品 佳穂 / Kaho Mishina',
       '森 璃弥武 / Lyam Mori'
     ]
+  },
+  {
+    head: 'B3',
+    data: ['']
   },
   {
     head: '同窓生',
