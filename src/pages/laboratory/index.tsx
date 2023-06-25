@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { css } from '@linaria/core'
 
 import { ArticleContainer } from '@/components/template/ArticleContainer'
+import { MovieContainer } from '@/components/template/MovieContainer'
 import { Heading } from '@/components/typography/Heading'
 import { SubHeading } from '@/components/typography/SubHeading'
 import { Text, textStyle } from '@/components/typography/Text'
@@ -64,7 +65,7 @@ export default function Research() {
             NVIDAのJetson Nanoを搭載したSparkFun JetBot AI
             ロボットキットを利用してディープラーニングを勉強しました。以下の動画は、衝突回避走行デモを用いて落下回避と衝突回避を学習させて試走させた時のものです。
           </Text>
-          <div className={videoWrap}>
+          <MovieContainer>
             <iframe
               width='100%'
               height='100%'
@@ -73,7 +74,7 @@ export default function Research() {
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
               allowFullScreen
             />
-          </div>
+          </MovieContainer>
         </section>
         <section>
           <Heading>Equipments</Heading>
@@ -110,12 +111,6 @@ const listItem = css`
     left: 0;
     transform: translateY(-50%);
   }
-`
-
-const videoWrap = css`
-  max-width: 560px;
-  margin: 0 auto 20px;
-  aspect-ratio: calc(560 / 315);
 `
 
 const itemBlock = css`

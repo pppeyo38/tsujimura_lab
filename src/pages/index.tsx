@@ -82,8 +82,8 @@ const siteTitle = css`
   letter-spacing: 0.05em;
 
   @media screen and (max-width: 830px) {
-    font-size: 3.2rem;
-    line-height: 3.2rem;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
   }
 
   span {
@@ -91,7 +91,7 @@ const siteTitle = css`
     letter-spacing: 0.03em;
 
     @media screen and (max-width: 830px) {
-      font-size: 1.8rem;
+      font-size: 1.2rem;
     }
   }
 `
