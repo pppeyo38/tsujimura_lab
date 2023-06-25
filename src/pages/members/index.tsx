@@ -10,15 +10,15 @@ import { Title } from '@/components/typography/Title'
 import { memberList } from '@/content/team'
 import { FontWeight } from '@/styles/StyleToken'
 
-export default function Research() {
+export default function Members() {
   return (
     <>
       <Head>
-        <title>Team｜辻村研究室｜名古屋市立大学芸術工学部</title>
+        <title>Members｜辻村研究室｜名古屋市立大学芸術工学部</title>
       </Head>
 
       <ArticleContainer>
-        <Title>Team</Title>
+        <Title>Members</Title>
         <section>
           <Heading>Professor</Heading>
           <ExternalLink link="'https://nrd.nagoya-cu.ac.jp/profile/ja.0597f54a4f5fa058.html'">

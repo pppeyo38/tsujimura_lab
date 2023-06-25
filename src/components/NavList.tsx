@@ -17,8 +17,8 @@ export const NavList = ({ path }: Props) => {
       <li className={`${listItem} ${path === '/laboratory' && isCurrent}`}>
         <Link href='/laboratory'>Lab Info</Link>
       </li>
-      <li className={`${listItem} ${path === '/team' && isCurrent}`}>
-        <Link href='/team'>Team</Link>
+      <li className={`${listItem} ${path === '/members' && isCurrent}`}>
+        <Link href='/members'>Members</Link>
       </li>
       <li className={`${listItem} ${path === '/publications' && isCurrent}`}>
         <Link href='/publications'>Publications</Link>
