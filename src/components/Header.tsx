@@ -6,7 +6,8 @@ import { useRouter } from 'next/router'
 import { css } from '@linaria/core'
 
 import { NavList } from '@/components/NavList'
-import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
+import { Color } from '@/styles/StyleToken'
+import HeaderIcon from 'public/header_icon.svg'
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false)
@@ -24,9 +25,9 @@ export default function Header() {
     <header className={header}>
       <div className={container}>
         <div className={headerInner}>
-          <h1 className={headerTitle}>
-            <Link href='/'>Tsujimura Lab.</Link>
-          </h1>
+          <Link href='/' className={headerTitle}>
+            <HeaderIcon />
+          </Link>
           <nav className={headerNavPc}>
             <NavList path={router.pathname} />
           </nav>
@@ -72,12 +73,7 @@ const headerInner = css`
 `
 
 const headerTitle = css`
-  a {
-    font-family: ${FontFamily.nunito_sans};
-    font-weight: ${FontWeight.black};
-    font-size: 28px;
-    letter-spacing: 0.05em;
-  }
+  display: inline-flex;
 `
 
 const headerNavPc = css`
