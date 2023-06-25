@@ -5,7 +5,7 @@ export const memberList = [
   },
   {
     head: '大学院修士課程',
-    data: ['藤田 優之 / Yuno Hujita']
+    data: ['藤田 優之 / Yuno Fujita']
   },
   {
     head: 'B4',
@@ -14,9 +14,9 @@ export const memberList = [
       '嬉野 友妃菜 / Yukina Ureshino',
       '大竹 未来 / Miku Otake',
       '滝川 瑞季 / Takigawa Mizuki',
-      '中嶋 莉那 / Rina Nakazima',
+      '中嶋 莉那 / Rina Nakajima',
       '三品 佳穂 / Kaho Mishina',
-      '森 璃弥武 / Lyam Mori'
+      '森 璃弥武 / Riyamu Mori'
     ]
   },
   {

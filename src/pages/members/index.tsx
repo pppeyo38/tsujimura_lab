@@ -7,7 +7,7 @@ import { ExternalLink } from '@/components/typography/ExternalLink'
 import { Heading } from '@/components/typography/Heading'
 import { textStyle } from '@/components/typography/Text'
 import { Title } from '@/components/typography/Title'
-import { memberList } from '@/content/team'
+import { memberList } from '@/content/members'
 import { FontWeight } from '@/styles/StyleToken'
 
 export default function Members() {
