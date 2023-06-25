@@ -16,9 +16,9 @@ export default function Home() {
       <section className={topVisual}>
         <div className={container}>
           <h1 className={siteTitle}>
-            Nagoya City University
+            <span>Nagoya City University</span>
             <br />
-            Tsujimura Lab
+            Tsujimura Lab.
           </h1>
         </div>
       </section>
@@ -58,7 +58,7 @@ const topVisual = css`
   display: flex;
   align-items: center;
   width: 100vw;
-  height: 100svh;
+  height: calc(100svh - 40px);
   background-color: ${Color.main_blue};
 `
 
@@ -67,15 +67,33 @@ const container = css`
   max-width: 1200px;
   padding: 0 40px;
   margin: 0 auto;
+
+  @media screen and (max-width: 830px) {
+    padding: 0 20px;
+  }
 `
 
 const siteTitle = css`
   color: ${Color.main_white};
   font-weight: ${FontWeight.bold};
   font-family: ${FontFamily.nunito_sans};
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   line-height: 4.2rem;
   letter-spacing: 0.05em;
+
+  @media screen and (max-width: 830px) {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+  }
+
+  span {
+    font-size: 2.2rem;
+    letter-spacing: 0.03em;
+
+    @media screen and (max-width: 830px) {
+      font-size: 1.8rem;
+    }
+  }
 `
 
 const article = css`

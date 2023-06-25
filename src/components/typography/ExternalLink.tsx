@@ -25,7 +25,6 @@ export const ExternalLink = ({ children, link, isBold }: Props) => {
 }
 
 const exLink = css`
-  display: inline-block;
   font-weight: ${FontWeight.regular};
   ${textStyle};
   text-decoration: underline;
@@ -33,6 +32,13 @@ const exLink = css`
 
   &:hover {
     color: ${Color.main_grey};
+  }
+
+  &::after {
+    content: url('/external-link.svg');
+    display: inline-block;
+    margin-left: 2px;
+    transform: translateY(2px);
   }
 `
 

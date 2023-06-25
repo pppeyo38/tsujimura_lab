@@ -59,17 +59,17 @@ const memberRow = css`
     border-width: 1px 0;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 720px) {
     flex-direction: column;
   }
 `
 
 const memberRole = css`
-  width: 25%;
+  width: 30%;
   ${textStyle}
   font-weight: ${FontWeight.bold};
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 720px) {
     width: 100%;
   }
 `
@@ -77,9 +77,9 @@ const memberRole = css`
 const memberListWrap = css`
   display: flex;
   flex-wrap: wrap;
-  width: 75%;
+  width: 70%;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 720px) {
     width: 100%;
   }
 `
