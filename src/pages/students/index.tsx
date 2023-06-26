@@ -6,15 +6,15 @@ import { Heading } from '@/components/typography/Heading'
 import { Text } from '@/components/typography/Text'
 import { Title } from '@/components/typography/Title'
 
-export default function ForStudent() {
+export default function ForStudents() {
   return (
     <>
       <Head>
-        <title>For Student｜辻村研究室｜名古屋市立大学芸術工学部</title>
+        <title>For Students｜辻村研究室｜名古屋市立大学芸術工学部</title>
       </Head>
 
       <ArticleContainer>
-        <Title>For Student</Title>
+        <Title>For Students</Title>
         <section>
           <Heading>研究室配属</Heading>
           <Text>
