@@ -51,25 +51,25 @@ const memberRow = css`
   display: flex;
   align-self: flex-start;
   padding: 0.8rem 0;
+  border-color: rgb(33 33 33 / 40%);
   border-style: solid;
-  border-color: rgba(33, 33, 33, 0.4);
   border-width: 0 0 1px;
 
   &:first-child {
     border-width: 1px 0;
   }
 
-  @media screen and (max-width: 720px) {
+  @media screen and (width <= 720px) {
     flex-direction: column;
   }
 `
 
 const memberRole = css`
   width: 30%;
-  ${textStyle}
   font-weight: ${FontWeight.bold};
+  ${textStyle}
 
-  @media screen and (max-width: 720px) {
+  @media screen and (width <= 720px) {
     width: 100%;
   }
 `
@@ -79,7 +79,7 @@ const memberListWrap = css`
   flex-wrap: wrap;
   width: 70%;
 
-  @media screen and (max-width: 720px) {
+  @media screen and (width <= 720px) {
     width: 100%;
   }
 `
@@ -90,7 +90,8 @@ const nameWrap = css`
 
   :not(:last-child) {
     margin-right: 0.5em;
-    &:after {
+
+    &::after {
       content: ',';
     }
   }

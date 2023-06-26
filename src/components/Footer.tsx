@@ -36,7 +36,7 @@ const container = css`
   padding: 32px 40px 20px;
   margin: 0 auto;
 
-  @media screen and (max-width: 830px) {
+  @media screen and (width <= 830px) {
     padding: 32px 20px 20px;
   }
 `
@@ -48,34 +48,34 @@ const inner = css`
 `
 
 const footerName = css`
-  color: ${Color.main_white};
-  font-weight: ${FontWeight.bold};
   font-size: 1.3125rem;
+  font-weight: ${FontWeight.bold};
   line-height: 1.75rem;
+  color: ${Color.main_white};
 `
 
 const footerSubName = css`
   display: block;
   color: ${Color.main_white};
-  ${textStyle};
+  ${textStyle}
 `
 
 const footerAddress = css`
   color: ${Color.main_white};
-  ${textStyle};
+  ${textStyle}
 `
 
 const spOnlyBr = css`
   display: none;
 
-  @media screen and (max-width: 424px) {
+  @media screen and (width <= 424px) {
     display: block;
   }
 `
 
 const copyRight = css`
   display: block;
-  color: ${Color.main_white};
   font-size: 0.9rem;
+  color: ${Color.main_white};
   text-align: center;
 `

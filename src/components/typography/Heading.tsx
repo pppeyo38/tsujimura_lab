@@ -13,12 +13,12 @@ export const Heading = ({ children }: Props) => {
 }
 
 const heading = css`
-  margin-bottom: 24px;
   padding: 2px 8px;
-  background-color: #d8ebf0;
-  font-weight: ${FontWeight.bold};
+  margin-bottom: 24px;
   font-family: ${FontFamily.nunito_sans};
   font-size: 1.625rem;
+  font-weight: ${FontWeight.bold};
   line-height: 2.25rem;
   letter-spacing: 0.02em;
+  background-color: #d8ebf0;
 `

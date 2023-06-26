@@ -14,9 +14,9 @@ export const Title = ({ children }: Props) => {
 
 const title = css`
   margin-bottom: 0.83em;
-  font-weight: ${FontWeight.bold};
   font-family: ${FontFamily.nunito_sans};
   font-size: 2rem;
+  font-weight: ${FontWeight.bold};
   line-height: 2.5rem;
   letter-spacing: 0.02em;
 `

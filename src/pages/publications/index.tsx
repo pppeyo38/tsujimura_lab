@@ -99,9 +99,9 @@ const articleTitle = css`
 
 const translate = css`
   display: inline-block;
-  color: rgba(33, 33, 33, 0.6);
   font-size: 1rem;
   line-height: 1.25rem;
+  color: rgb(33 33 33 / 60%);
 `
 
 const clListItem = css`
@@ -110,11 +110,11 @@ const clListItem = css`
   font-weight: ${FontWeight.bold};
   ${textStyle};
 
-  &:before {
-    content: '・';
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
+    content: '・';
   }
 `
 
@@ -124,11 +124,11 @@ const clSubListItem = css`
   font-weight: ${FontWeight.regular};
   ${textStyle};
 
-  &:before {
-    content: '・';
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
+    content: '・';
   }
 `
 

@@ -36,8 +36,8 @@ const article = css`
   align-items: center;
   width: 92%;
   max-width: 840px;
-  margin: 0 auto;
   padding: calc(6rem + 64px) 0 6rem;
+  margin: 0 auto;
 
   h3,
   p {
@@ -49,8 +49,8 @@ const iconWrap = css`
   position: relative;
   width: 80%;
   max-width: 400px;
+  aspect-ratio: 860.1314 / 571.148;
   margin-bottom: 40px;
-  aspect-ratio: 860.13137 / 571.14799;
 
   svg {
     position: absolute;
@@ -60,7 +60,7 @@ const iconWrap = css`
 const spOnlyBr = css`
   display: none;
 
-  @media screen and (max-width: 424px) {
+  @media screen and (width <= 424px) {
     display: block;
   }
 `

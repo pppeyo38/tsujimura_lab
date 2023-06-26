@@ -17,5 +17,6 @@ export const textStyle = {
 
 const text = css`
   ${textStyle};
+
   margin: 20px 0;
 `

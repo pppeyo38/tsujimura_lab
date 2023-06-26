@@ -20,6 +20,6 @@ const inner = css`
   gap: 40px;
   width: 92%;
   max-width: 840px;
-  margin: 0 auto;
   padding: calc(6rem + 64px) 0 6rem;
+  margin: 0 auto;
 `

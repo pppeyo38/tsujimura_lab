@@ -1,7 +1,5 @@
 import Head from 'next/head'
 
-import { css } from '@linaria/core'
-
 import { ArticleContainer } from '@/components/template/ArticleContainer'
 import { MovieContainer } from '@/components/template/MovieContainer'
 import { Heading } from '@/components/typography/Heading'
@@ -43,5 +41,3 @@ export default function ForStudent() {
     </>
   )
 }
-
-const xxx = css``

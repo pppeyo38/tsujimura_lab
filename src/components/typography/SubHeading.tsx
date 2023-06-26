@@ -13,8 +13,8 @@ export const SubHeading = ({ children }: Props) => {
 }
 
 export const subHeadingStyle = css`
-  font-weight: ${FontWeight.bold};
   font-size: 1.3125rem;
+  font-weight: ${FontWeight.bold};
   line-height: 1.75rem;
 `
 

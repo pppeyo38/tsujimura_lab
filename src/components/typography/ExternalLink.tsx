@@ -27,6 +27,7 @@ export const ExternalLink = ({ children, link, isBold }: Props) => {
 const exLink = css`
   font-weight: ${FontWeight.regular};
   ${textStyle};
+
   text-decoration: underline;
   transition: 0.2s;
 
@@ -35,9 +36,9 @@ const exLink = css`
   }
 
   &::after {
-    content: url('/external-link.svg');
     display: inline-block;
     margin-left: 2px;
+    content: url('/external-link.svg');
     transform: translateY(2px);
   }
 `

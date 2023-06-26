@@ -52,7 +52,7 @@ const header = css`
   z-index: 100;
   width: 100%;
   background: #fff;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
 `
 
 const container = css`
@@ -60,7 +60,7 @@ const container = css`
   padding: 0 40px;
   margin: 0 auto;
 
-  @media screen and (max-width: 830px) {
+  @media screen and (width <= 830px) {
     padding: 0 20px;
   }
 `
@@ -77,7 +77,7 @@ const headerTitle = css`
 `
 
 const headerNavPc = css`
-  @media screen and (max-width: 830px) {
+  @media screen and (width <= 830px) {
     display: none;
   }
 `
@@ -85,7 +85,7 @@ const headerNavPc = css`
 const headerNavSp = css`
   display: none;
 
-  @media screen and (max-width: 830px) {
+  @media screen and (width <= 830px) {
     display: block;
     margin-bottom: 64px;
   }
@@ -94,7 +94,7 @@ const headerNavSp = css`
 const headerMenuBtn = css`
   display: none;
 
-  @media screen and (max-width: 830px) {
+  @media screen and (width <= 830px) {
     position: relative;
     display: block;
     width: 28px;
@@ -104,8 +104,8 @@ const headerMenuBtn = css`
 
 const menuBtnBar = css`
   position: absolute;
-  display: block;
   left: 0;
+  display: block;
   width: 28px;
   height: 2px;
   background-color: ${Color.main_black};
@@ -142,7 +142,7 @@ const isMenuOpen = css`
 const spNavWrap = css`
   display: none;
 
-  @media screen and (max-width: 830px) {
+  @media screen and (width <= 830px) {
     position: fixed;
     top: 64px;
     left: 0;
@@ -153,18 +153,17 @@ const spNavWrap = css`
     height: calc(100svh - 64px);
     background-color: ${Color.main_white};
     opacity: 0;
-    transform: translateY(-10px);
-    transition-property: opacity, transform;
     transition-timing-function: ease;
     transition-duration: 0.3s;
-    pointer-events: none;
+    transition-property: opacity, transform;
+    transform: translateY(-10px);
   }
 `
 
 const navActive = css`
-  @media screen and (max-width: 830px) {
-    opacity: 1;
-    transform: translateY(0px);
+  @media screen and (width <= 830px) {
     pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
   }
 `

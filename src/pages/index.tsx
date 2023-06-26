@@ -75,20 +75,20 @@ const container = css`
   padding: 0 40px;
   margin: 0 auto;
 
-  @media screen and (max-width: 830px) {
+  @media screen and (width <= 830px) {
     padding: 0 20px;
   }
 `
 
 const siteTitle = css`
-  color: ${Color.main_white};
-  font-weight: ${FontWeight.bold};
   font-family: ${FontFamily.nunito_sans};
   font-size: 4.2rem;
+  font-weight: ${FontWeight.bold};
   line-height: 4.2rem;
+  color: ${Color.main_white};
   letter-spacing: 0.05em;
 
-  @media screen and (max-width: 830px) {
+  @media screen and (width <= 830px) {
     font-size: 2.2rem;
     line-height: 2.2rem;
   }
@@ -97,7 +97,7 @@ const siteTitle = css`
     font-size: 2.2rem;
     letter-spacing: 0.03em;
 
-    @media screen and (max-width: 830px) {
+    @media screen and (width <= 830px) {
       font-size: 1.2rem;
     }
   }
@@ -109,8 +109,8 @@ const article = css`
   gap: 40px;
   width: 92%;
   max-width: 840px;
-  margin: 80px auto 0;
   padding: 0 0 6rem;
+  margin: 80px auto 0;
 `
 
 const sectionBlock = css`
@@ -133,9 +133,9 @@ const outline = css`
 const viewMore = css`
   align-self: flex-end;
   font-weight: ${FontWeight.regular};
-  ${textStyle};
   text-decoration: underline;
   transition: 0.2s;
+  ${textStyle};
 
   &:hover {
     color: ${Color.main_grey};

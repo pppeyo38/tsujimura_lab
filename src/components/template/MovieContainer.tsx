@@ -12,6 +12,6 @@ export const MovieContainer = ({ children }: Props) => {
 
 const videoWrap = css`
   max-width: 560px;
-  margin: 0 auto 20px;
   aspect-ratio: calc(560 / 315);
+  margin: 0 auto 20px;
 `

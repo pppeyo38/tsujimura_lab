@@ -106,11 +106,11 @@ const listItem = css`
   padding-inline-start: 20px;
   ${textStyle}
 
-  &:before {
-    content: '・';
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
+    content: '・';
   }
 `
 
@@ -123,10 +123,10 @@ const equipmentList = css`
 const itemBlock = css`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   gap: 0 20px;
+  align-items: center;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (width <= 750px) {
     grid-template-columns: 1fr;
   }
 `
