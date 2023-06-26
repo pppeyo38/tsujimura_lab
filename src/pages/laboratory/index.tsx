@@ -78,17 +78,19 @@ export default function Research() {
         </section>
         <section>
           <Heading>Equipments</Heading>
-          {equipmentsList.map((item, index) => (
-            <div key={index} className={itemBlock}>
-              <div>
-                <SubHeading>{item.name}</SubHeading>
-                <Text>{item.detail}</Text>
-              </div>
-              <div className={imageBlock}>
-                <Image src={item.image} alt={item.name} fill />
-              </div>
-            </div>
-          ))}
+          <ul className={equipmentList}>
+            {equipmentsList.map((item, index) => (
+              <li key={index} className={itemBlock}>
+                <div>
+                  <SubHeading>{item.name}</SubHeading>
+                  <Text>{item.detail}</Text>
+                </div>
+                <div className={imageBlock}>
+                  <Image src={item.image} alt={item.name} fill />
+                </div>
+              </li>
+            ))}
+          </ul>
         </section>
       </ArticleContainer>
     </>
@@ -107,10 +109,15 @@ const listItem = css`
   &:before {
     content: '・';
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translateY(-50%);
   }
+`
+
+const equipmentList = css`
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 `
 
 const itemBlock = css`
@@ -118,7 +125,6 @@ const itemBlock = css`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 0 20px;
-  padding: 16px 0;
 
   @media screen and (max-width: 750px) {
     grid-template-columns: 1fr;
