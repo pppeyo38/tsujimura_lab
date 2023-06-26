@@ -30,9 +30,13 @@ export default function Publications() {
           <ul className={listStyle}>
             {articlesList.map((item, index) => (
               <li key={`publication${index}`}>
-                <ExternalLink link={item.link} isBold>
-                  {item.title}
-                </ExternalLink>
+                {item.link ? (
+                  <ExternalLink link={item.link} isBold>
+                    {item.title}
+                  </ExternalLink>
+                ) : (
+                  <p className={articleTitle}>{item.title}</p>
+                )}
                 <span className={translate}>{item.translation}</span>
               </li>
             ))}
@@ -85,6 +89,12 @@ const listStyle = css`
   flex-direction: column;
   gap: 16px;
   margin: 20px 0;
+`
+
+const articleTitle = css`
+  margin: 0;
+  font-weight: ${FontWeight.bold};
+  ${textStyle};
 `
 
 const translate = css`
