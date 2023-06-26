@@ -21,6 +21,12 @@ export default function Header() {
     setIsNavOpen(false)
   }, [router.pathname])
 
+  useEffect(() => {
+    isNavOpen
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'auto')
+  }, [isNavOpen])
+
   return (
     <header className={header}>
       <div className={container}>
