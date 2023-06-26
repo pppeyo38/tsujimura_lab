@@ -42,25 +42,17 @@ export default function Home() {
           <Heading>News</Heading>
           <ul className={newsList}>
             <li className={newsItem}>
-              <a
-                href='https://www.nagoya-cu.ac.jp/media/20230621press.pdf'
-                target='_blank'
-                rel='noopener'
-              >
-                <span>2023/06/22</span>
-                <ExternalLink link='https://www.nagoya-cu.ac.jp/media/20230621press.pdf'>
-                  特殊な照明光を用いることによってヒトのコントラスト（文字や画像の濃淡）感度を改善することを発見
-                  (PDF: 0.99MB)
-                </ExternalLink>
-              </a>
+              <span>2023/06/22</span>
+              <ExternalLink link='https://www.nagoya-cu.ac.jp/media/20230621press.pdf'>
+                特殊な照明光を用いることによってヒトのコントラスト（文字や画像の濃淡）感度を改善することを発見
+                (PDF: 0.99MB)
+              </ExternalLink>
             </li>
             <li className={newsItem}>
-              <Link href='/'>
-                <span>2023/06/22</span>
-                <p>
-                  ホームページをリニューアルしました。進学や研究室配属などに役立ててください。
-                </p>
-              </Link>
+              <span>2023/06/22</span>
+              <p>
+                ホームページをリニューアルしました。進学や研究室配属などに役立ててください。
+              </p>
             </li>
           </ul>
         </section>
@@ -157,14 +149,12 @@ const newsList = css`
 `
 
 const newsItem = css`
+  display: grid;
+  grid-template-columns: 112px 1fr;
   line-height: 1.75rem;
-
-  a {
-    display: inline-flex;
-  }
 
   span {
     display: inline-block;
-    min-width: 120px;
+    width: 112px;
   }
 `
