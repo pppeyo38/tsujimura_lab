@@ -22,7 +22,10 @@ export default class MyDocument extends Document {
             property='og:description'
             content='辻村研究室のホームページへようこそ。我々は生命を一つの汎用的情報処理システムとみなし、視覚情報の一つである色や形、明るさ情報について学び、特に第3の光受容体である網膜メラノプシン神経節細胞(ipRGC)に着目して研究を進めています。'
           />
-          <link rel='icon' href='/favicon.ico' />
+          <link
+            rel='icon'
+            href='https://www.sda.nagoya-cu.ac.jp/tsujimura/favicon.ico'
+          />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
             rel='preconnect'

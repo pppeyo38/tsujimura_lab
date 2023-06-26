@@ -2,6 +2,7 @@
 const withLinaria = require('next-with-linaria')
 
 const nextConfig = {
+  basePath: '/tsujimura',
   reactStrictMode: true,
   swcMinify: true,
   webpack: (config) => {
@@ -16,7 +17,8 @@ const nextConfig = {
     return config
   },
   images: {
-    disableStaticImages: true
+    disableStaticImages: true,
+    unoptimized: true
   }
 }
 
