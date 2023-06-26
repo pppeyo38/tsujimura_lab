@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 import { css } from '@linaria/core'
 
+import { ExternalLink } from '@/components/typography/ExternalLink'
 import { Heading } from '@/components/typography/Heading'
 import { textStyle } from '@/components/typography/Text'
 import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
-import { ExternalLink } from '@/components/typography/ExternalLink'
 
 export default function Home() {
   return (
