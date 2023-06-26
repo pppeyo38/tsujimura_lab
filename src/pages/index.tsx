@@ -4,7 +4,9 @@ import Link from 'next/link'
 import { css } from '@linaria/core'
 
 import { Heading } from '@/components/typography/Heading'
+import { textStyle } from '@/components/typography/Text'
 import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
+import { ExternalLink } from '@/components/typography/ExternalLink'
 
 export default function Home() {
   return (
@@ -24,7 +26,19 @@ export default function Home() {
       </section>
 
       <article className={article}>
-        <section className={newsBlock}>
+        <section className={sectionBlock}>
+          <Heading>Outline</Heading>
+          <p className={outline}>
+            名古屋市立大学芸術工学研究科 辻村誠一研究室のホームページです。
+          </p>
+          <p className={outline}>
+            当研究室では、光の色を調整して世界で初めてメラノプシン細胞のみを刺激できる装置を開発し、メラノプシン細胞のコントラスト感度への寄与について実験を行っています。
+          </p>
+          <Link href='/laboratory' className={viewMore}>
+            view more
+          </Link>
+        </section>
+        <section className={sectionBlock}>
           <Heading>News</Heading>
           <ul className={newsList}>
             <li className={newsItem}>
@@ -34,9 +48,10 @@ export default function Home() {
                 rel='noopener'
               >
                 <span>2023/06/22</span>
-                <p>
+                <ExternalLink link='https://www.nagoya-cu.ac.jp/media/20230621press.pdf'>
                   特殊な照明光を用いることによってヒトのコントラスト（文字や画像の濃淡）感度を改善することを発見
-                </p>
+                  (PDF: 0.99MB)
+                </ExternalLink>
               </a>
             </li>
             <li className={newsItem}>
@@ -97,20 +112,48 @@ const siteTitle = css`
 `
 
 const article = css`
-  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 92%;
+  max-width: 840px;
+  margin: 80px auto 0;
+  padding: 0 0 6rem;
 `
 
-const newsBlock = css`
-  width: 88%;
-  max-width: 840px;
-  margin: 0 auto;
+const sectionBlock = css`
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    width: 100%;
+  }
+`
+
+const outline = css`
+  ${textStyle};
+
+  &:first-child {
+    margin-bottom: 20px;
+  }
+`
+
+const viewMore = css`
+  align-self: flex-end;
+  font-weight: ${FontWeight.regular};
+  ${textStyle};
+  text-decoration: underline;
+  transition: 0.2s;
+
+  &:hover {
+    color: ${Color.main_grey};
+  }
 `
 
 const newsList = css`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 32px;
 `
 
 const newsItem = css`
