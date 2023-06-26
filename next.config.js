@@ -3,6 +3,7 @@ const withLinaria = require('next-with-linaria')
 
 const nextConfig = {
   basePath: '/tsujimura',
+  trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
   webpack: (config) => {
