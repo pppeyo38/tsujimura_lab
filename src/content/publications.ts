@@ -2,60 +2,58 @@ export const articlesList = [
   {
     title:
       'Melanopsin-Based Brightness Discrimination in Mice and Humans(2012)',
-    link: '',
+    link: 'https://www.cell.com/current-biology/fulltext/S0960-9822(12)00459-9?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982212004599%3Fshowall%3Dtrue',
     translation: 'マウスとヒトにおけるメラノプシンに基づく輝度識別'
   },
   {
     title:
       'Delayed response of human melanopsin retinal ganglion cells on the pupillary light reflex(2011)',
-    link: '',
     translation: '瞳孔光反射におけるヒトメラノプシン網膜神経節細胞の遅延性反応'
   },
   {
     title:
       'Contribution of human melanopsin retinal ganglion cells to steady-state pupil responses(2010)',
-    link: '',
+    link: 'https://royalsocietypublishing.org/doi/abs/10.1098/rspb.2010.0330',
     translation: '定常瞳孔反応に対するヒトメラノプシン網膜神経節細胞の寄与度'
   },
   {
     title:
       'Two distinct cone-opponent processes in the L+M luminance pathway(2007)',
-    link: '',
+    link: 'http://www.sda.nagoya-cu.ac.jp/tsujimura/Tsujimura2007.pdf',
     translation: 'L+M輝度経路における2つの異なる錐体対向過程'
   },
   {
     title: 'Pupil response to colour signals in cone-contrast space(2006)',
-    link: '',
     translation: '錐体コントラスト空間における色信号に対する瞳孔の反応'
   },
   {
     title:
       'Pupil responses associated with coloured afterimages are mediated by the magnocellular pathway(2003)',
-    link: '',
+    link: 'http://www.sda.nagoya-cu.ac.jp/tsujimura/Tsujimura2003.pdf',
     translation: '大脳細胞経路によって媒介される色彩残像に伴う瞳孔の反応'
   },
   {
     title:
       'Similarities between visual processing of shear and uniform motion(2002)',
-    link: '',
+    link: 'http://www.sda.nagoya-cu.ac.jp/tsujimura/Tsujimura2002.pdf',
     translation: 'せん断運動と一様運動に対する視覚処理の類似性'
   },
   {
     title: 'A linear chromatic mechanism drives the pupillary responses(2001)',
-    link: '',
+    link: 'https://royalsocietypublishing.org/doi/abs/10.1098/rspb.2001.1775',
     translation: 'リニアクロマティックメカニズムにより駆動する瞳孔の反応'
   },
   {
     title:
       'Technique to investigate the temporal phase shift between L- and M-cone inputs to the luminance mechanism(2000)',
-    link: '',
+    link: 'http://www.sda.nagoya-cu.ac.jp/tsujimura/Tsujimura2000.pdf',
     translation:
       '輝度機構におけるL錐体入力とM錐体入力の時間的位相差を調べる技術'
   },
   {
     title:
       'Selective cone suppression by the L-M and M-L cone-opponent mechanisms in the luminance pathway(1999)',
-    link: '',
+    link: 'http://www.sda.nagoya-cu.ac.jp/tsujimura/Tsujimura1999.pdf',
     translation:
       '輝度経路におけるL-MおよびM-L錐体対向機構による選択的な錐体抑制について'
   }
