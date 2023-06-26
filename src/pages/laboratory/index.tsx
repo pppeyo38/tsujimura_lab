@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 
 import { css } from '@linaria/core'
 
@@ -86,7 +85,7 @@ export default function Research() {
                   <Text>{item.detail}</Text>
                 </div>
                 <div className={imageBlock}>
-                  <Image src={item.image} alt={item.name} fill />
+                  <img src={item.image} alt={item.name} />
                 </div>
               </li>
             ))}
@@ -132,12 +131,11 @@ const itemBlock = css`
 `
 
 const imageBlock = css`
-  position: relative;
   width: 100%;
-  aspect-ratio: 3 / 2;
-  background-color: gray;
 
-  image {
+  img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
   }
 `
