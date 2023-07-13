@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { css } from '@linaria/core'
+import { LanguageSwitcher } from 'next-export-i18n'
 
 import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
 
@@ -26,8 +27,20 @@ export const NavList = ({ path }: Props) => {
       <li className={`${listItem} ${path === '/students' && isCurrent}`}>
         <Link href='/students'>For Students</Link>
       </li>
+      <li className={listItem}>
+        <LanguageSwitcher lang='ja'>ja</LanguageSwitcher> |{' '}
+        <LanguageSwitcher lang='en'>en</LanguageSwitcher>
+      </li>
     </ol>
   )
+}
+
+const textStyle = {
+  fontFamily: `${FontFamily.nunito_sans}`,
+  fontSize: '1.1rem',
+  fontWeight: `${FontWeight.bold}`,
+  lineHeight: '1.75rem',
+  letterSpacing: '0.05rem'
 }
 
 const list = css`
@@ -43,11 +56,7 @@ const list = css`
 const listItem = css`
   a {
     position: relative;
-    font-family: ${FontFamily.nunito_sans};
-    font-size: 1.1rem;
-    font-weight: ${FontWeight.bold};
-    line-height: 1.75rem;
-    letter-spacing: 0.05rem;
+    ${textStyle};
 
     &::after {
       position: absolute;
@@ -64,6 +73,14 @@ const listItem = css`
 
     &:hover::after {
       transform: scale(1, 1);
+    }
+  }
+
+  span {
+    ${textStyle};
+
+    &[data-is-current='false'] {
+      color: ${Color.main_grey};
     }
   }
 `

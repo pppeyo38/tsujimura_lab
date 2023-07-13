@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { css } from '@linaria/core'
-import { LanguageSwitcher } from 'next-export-i18n'
+import { useLanguageQuery } from 'next-export-i18n'
 
 import { NavList } from '@/components/NavList'
 import { Color } from '@/styles/StyleToken'
@@ -13,6 +13,7 @@ import HeaderIcon from 'public/header_icon.svg'
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false)
   const router = useRouter()
+  const [query] = useLanguageQuery()
 
   const toggleNavOpen = () => {
     setIsNavOpen(!isNavOpen)
@@ -20,7 +21,7 @@ export default function Header() {
 
   useEffect(() => {
     setIsNavOpen(false)
-  }, [router.pathname])
+  }, [router.pathname, query])
 
   useEffect(() => {
     isNavOpen
@@ -37,8 +38,6 @@ export default function Header() {
           </Link>
           <nav className={headerNavPc}>
             <NavList path={router.pathname} />
-            <LanguageSwitcher lang='ja'>ja</LanguageSwitcher> |{' '}
-            <LanguageSwitcher lang='en'>en</LanguageSwitcher>
           </nav>
           <button className={headerMenuBtn} onClick={() => toggleNavOpen()}>
             <span className={`${menuBtnBar} ${isNavOpen && isMenuOpen}`} />
