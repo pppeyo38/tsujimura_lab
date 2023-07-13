@@ -16,18 +16,18 @@
     "index": {
       "title": "辻村研究室｜名古屋市立大学芸術工学部",
       "outline": [
-        "名古屋市立大学芸術工学研究科 辻村誠一研究室のホームページです。",
-        "当研究室では、光の色を調整して世界で初めてメラノプシン細胞のみを刺激できる装置を開発し、メラノプシン細胞のコントラスト感度への寄与について実験を行っています。"
+        "This is the home page of Seiichi Tsujimura Laboratory, Nagoya City University, Graduate School of Art and Design.",
+        "Our laboratory has developed the world's first device that can stimulate only melanopsin cells by adjusting the color of light, and is conducting experiments on the contribution of melanopsin cells to contrast sensitivity."
       ],
       "news": [
         {
           "date": "2023/06/22",
-          "text": "特殊な照明光を用いることによってヒトのコントラスト（文字や画像の濃淡）感度を改善することを発見(PDF: 0.99MB)",
+          "text": "Discovered that the use of special illumination light improves contrast (text and image shading) sensitivity in humans.(PDF: 0.99MB)",
           "link": "https://www.nagoya-cu.ac.jp/media/20230621press.pdf"
         },
         {
           "date": "2023/06/22",
-          "text": "ホームページをリニューアルしました。進学や研究室配属などに役立ててください。"
+          "text": "We have renewed our homepage. Please use it for your higher education and laboratory assignments."
         }
       ]
     },

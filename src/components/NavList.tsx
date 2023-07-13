@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { css } from '@linaria/core'
-import { LanguageSwitcher } from 'next-export-i18n'
+import { LanguageSwitcher, useLanguageQuery } from 'next-export-i18n'
 
 import { Color, FontFamily, FontWeight } from '@/styles/StyleToken'
 
@@ -10,22 +10,26 @@ type Props = {
 }
 
 export const NavList = ({ path }: Props) => {
+  const [query] = useLanguageQuery()
+
   return (
     <ol className={list}>
       <li className={`${listItem} ${path === '/' && isCurrent}`}>
-        <Link href='/'>Top</Link>
+        <Link href={{ pathname: '/', query: query }}>Top</Link>
       </li>
       <li className={`${listItem} ${path === '/laboratory' && isCurrent}`}>
-        <Link href='/laboratory'>Lab Info</Link>
+        <Link href={{ pathname: '/laboratory', query: query }}>Lab Info</Link>
       </li>
       <li className={`${listItem} ${path === '/members' && isCurrent}`}>
-        <Link href='/members'>Members</Link>
+        <Link href={{ pathname: '/members', query: query }}>Members</Link>
       </li>
       <li className={`${listItem} ${path === '/publications' && isCurrent}`}>
-        <Link href='/publications'>Publications</Link>
+        <Link href={{ pathname: '/publications', query: query }}>
+          Publications
+        </Link>
       </li>
       <li className={`${listItem} ${path === '/students' && isCurrent}`}>
-        <Link href='/students'>For Students</Link>
+        <Link href={{ pathname: '/students', query: query }}>For Students</Link>
       </li>
       <li className={listItem}>
         <LanguageSwitcher lang='ja'>ja</LanguageSwitcher> |{' '}
