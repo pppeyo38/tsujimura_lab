@@ -1,0 +1,261 @@
+{
+  "i18n": {
+    "ui": {
+      "languageSwitcher": "Choose Language: "
+    },
+    "nav": {
+      "nyc": {
+        "text": "Go to New York City",
+        "route": "/nyc"
+      },
+      "index": {
+        "text": "Got To Paris",
+        "route": "/"
+      }
+    },
+    "index": {
+      "outline": [
+        "名古屋市立大学芸術工学研究科 辻村誠一研究室のホームページです。",
+        "当研究室では、光の色を調整して世界で初めてメラノプシン細胞のみを刺激できる装置を開発し、メラノプシン細胞のコントラスト感度への寄与について実験を行っています。"
+      ],
+      "news": [
+        {
+          "date": "2023/06/22",
+          "text": "特殊な照明光を用いることによってヒトのコントラスト（文字や画像の濃淡）感度を改善することを発見(PDF: 0.99MB)"
+        },
+        {
+          "date": "2023/06/22",
+          "text": "ホームページをリニューアルしました。進学や研究室配属などに役立ててください。"
+        }
+      ]
+    },
+    "laboratory": {
+      "outline": "生命を一つの汎用的情報処理システムとみなし、視覚情報である色や形、明るさ情報がどのような過程によって処理されるのかを神経生理学的、実験心理学的なアプローチで研究しています。",
+      "section": {
+        "research": {
+          "subheading": "メラノプシン神経節細胞の研究",
+          "content": [
+            "私たちは、色や明るさなどの感覚知覚情報処理と高次脳機能との関連性に着目しています。加えて、脳内で外界の光信号の符号化に関し重要な役割を担っているメラノプシン神経節細胞（intrinsicallyphotosensitive retinal ganglion cell:ipRGCs以下、メラノプシン細胞）の機能解明にも着目しています。網膜での処理が生体内でどのように処理・統合され、脳内でどのように表現されているのかという疑問に答えることが私たちの目標です。私たちは、心理物理学的手法と神経生理学的手法を用いて研究に取り組んでいます。私たちの眼球の網膜には、２種類の光受容器（錐体細胞、桿体細胞）が存在いています。この2つの光受容器のみによって、ヒトはものを見たり識別したりしていると長年考えられてきました。",
+            "しかしながら、３番目の光受容器であるメラノプシン細胞が発見されました。メラノプシン細胞はメラノプシンという光受容タンパク質を持つ細胞です。メラノプシン細胞の発見により、概日光制御や瞳孔光反射など、非撮像系経路(non-image-forming pathway)や撮像系経路(image-forming oathway)について根本的に見直されるようになりました。メラノプシン細胞は環境光を脳内で符号化する上で重要な役割を担っていると考えられています。環境光によって刺激されたメラノプシン細胞からの信号は、杆体や錐体といった古典的な視細胞からの信号とともに、非撮像系経路や撮像系経路の脳内機能に寄与しています。",
+            "私たちの研究グループでは世界で初めてメラノプシン細胞が明るさの知覚に寄与していることを発見しました。一方で、概日リズムの調節や瞳孔の対光反応、明るさの知覚等はメラノプシン細胞の機能のごく一部であり、メラノプシン細胞の機能はまだ他にもあるのではないかと考えられています。例えば、記憶や注意、気分、偏頭痛などにも影響するかもしれません。"
+          ]
+        },
+        "studentResearch": {
+          "subheading": "実験心理学・脳神経科学",
+          "content": [
+            "メラノプシン神経節細胞の瞳孔径路への寄与の解明",
+            "色、輝度情報とメラノプシン神経節細胞との機能的関連性",
+            "光環境が概日リズムに及ぼす影響の解明",
+            "ヒトの色の知覚メカニズムの解明",
+            "ヒトの明るさ知覚メカニズムの解明"
+          ]
+        },
+        "recentActivities": {
+          "subheading": "研究室での実験",
+          "content": [
+            "NVIDAのJetson Nanoを搭載したSparkFun JetBot AIロボットキットを利用してディープラーニングを勉強しました。以下の動画は、衝突回避走行デモを用いて落下回避と衝突回避を学習させて試走させた時のものです。"
+          ]
+        },
+        "equipments": [
+          {
+            "name": "分光放射照度計",
+            "detail": "人間の目で見える光の領域380nm～780nm間で1nmピッチ毎の物理エネルギー量（絶対値）を測定します。またその値から計算にて高精度で輝度・色度・色温度・主波長等も算出されます。様々な実験装置のキャリブレーションに用いています。",
+            "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image1.jpg"
+          },
+          {
+            "name": "分光放射照度計",
+            "detail": "分光放射照度計CL-500Aは、光の演色評価数、相関色温度、色度、照度（JIS一般形AA級）、暗所視照度、三刺激値、主波長刺激純度、ピーク波長、分光放射照度値（360nm～780nm1nmピッチ：外部出力のみ）の測定が可能な分光放射照度計です。",
+            "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image2.jpg"
+          },
+          {
+            "name": "2次元色彩輝度計",
+            "detail": "RTC-21(2次元色彩輝度計)は、一般的なRGB三原色カメラでは捉えられない幅広い色域の色情報が取得できる、人の眼と等価な感度のXYZ表色系を採用したカメラです。取得した広色域・高色忠実XYZ映像をPCで確認できます。PCでのXYZ画像のファイル保存・分析が可能です。",
+            "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image3.jpg"
+          },
+          {
+            "name": "LED Cube",
+            "detail": "THOUSLITE LEDCubeは、独自の最適化アルゴリズムと10個の特殊なLEDを用いて、異なる分光分布（SPD）でのあらゆる照明環境シュミレーションを簡単で正確に実現にする「照明環境シュミレート光源」です。",
+            "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image4.jpg"
+          }
+        ]
+      }
+    },
+    "members": {
+      "list": [
+        {
+          "head": "日本学術振興会特別研究員",
+          "data": ["齋藤 真里菜 / Marina Saito"]
+        },
+        {
+          "head": "大学院修士課程",
+          "data": ["藤田 優之 / Yuno Fujita"]
+        },
+        {
+          "head": "B4",
+          "data": [
+            "岩崎 百花 / Momoka Iwasaki",
+            "嬉野 友妃菜 / Yukina Ureshino",
+            "大竹 未来 / Miku Otake",
+            "滝川 瑞季 / Mizuki Takikawa",
+            "中嶋 莉那 / Rina Nakajima",
+            "三品 佳穂 / Kaho Mishina",
+            "森 璃弥武 / Lyam Mori"
+          ]
+        },
+        {
+          "head": "B3",
+          "data": [""]
+        },
+        {
+          "head": "同窓生",
+          "data": [
+            "伊藤 登萌 / Tomoe Ito (2023)",
+            "高須 葵 / Aoi Takasu (2023)",
+            "Bullot Loefc (2021)",
+            "Vincent Conus (2020)",
+            "Yan Michellod (2019)"
+          ]
+        }
+      ]
+    },
+    "publications": {
+      "section": {
+        "selectedArticles": {
+          "subheading": "主な研究業績",
+          "content": [
+            {
+              "title": "Melanopsin-Based Brightness Discrimination in Mice and Humans(2012)",
+              "link": "https://www.cell.com/current-biology/fulltext/S0960-9822(12)00459-9?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982212004599%3Fshowall%3Dtrue",
+              "translation": "マウスとヒトにおけるメラノプシンに基づく輝度識別"
+            },
+            {
+              "title": "Delayed response of human melanopsin retinal ganglion cells on the pupillary light reflex(2011)",
+              "translation": "瞳孔光反射におけるヒトメラノプシン網膜神経節細胞の遅延性反応"
+            },
+            {
+              "title": "Contribution of human melanopsin retinal ganglion cells to steady-state pupil responses(2010)",
+              "link": "https://royalsocietypublishing.org/doi/abs/10.1098/rspb.2010.0330",
+              "translation": "定常瞳孔反応に対するヒトメラノプシン網膜神経節細胞の寄与度"
+            },
+            {
+              "title": "Two distinct cone-opponent processes in the L+M luminance pathway(2007)",
+              "link": "http://www.sda.nagoya-cu.ac.jp/tsujimura/Tsujimura2007.pdf",
+              "translation": "L+M輝度経路における2つの異なる錐体対向過程"
+            },
+            {
+              "title": "Pupil response to colour signals in cone-contrast space(2006)",
+              "translation": "錐体コントラスト空間における色信号に対する瞳孔の反応"
+            },
+            {
+              "title": "Pupil responses associated with coloured afterimages are mediated by the magnocellular pathway(2003)",
+              "link": "http://www.sda.nagoya-cu.ac.jp/tsujimura/Tsujimura2003.pdf",
+              "translation": "大脳細胞経路によって媒介される色彩残像に伴う瞳孔の反応"
+            },
+            {
+              "title": "Similarities between visual processing of shear and uniform motion(2002)",
+              "link": "http://www.sda.nagoya-cu.ac.jp/tsujimura/Tsujimura2002.pdf",
+              "translation": "せん断運動と一様運動に対する視覚処理の類似性"
+            },
+            {
+              "title": "A linear chromatic mechanism drives the pupillary responses(2001)",
+              "link": "https://royalsocietypublishing.org/doi/abs/10.1098/rspb.2001.1775",
+              "translation": "リニアクロマティックメカニズムにより駆動する瞳孔の反応"
+            },
+            {
+              "title": "Technique to investigate the temporal phase shift between L- and M-cone inputs to the luminance mechanism(2000)",
+              "link": "http://www.sda.nagoya-cu.ac.jp/tsujimura/Tsujimura2000.pdf",
+              "translation": "輝度機構におけるL錐体入力とM錐体入力の時間的位相差を調べる技術"
+            },
+            {
+              "title": "Selective cone suppression by the L-M and M-L cone-opponent mechanisms in the luminance pathway(1999)",
+              "link": "http://www.sda.nagoya-cu.ac.jp/tsujimura/Tsujimura1999.pdf",
+              "translation": "輝度経路におけるL-MおよびM-L錐体対向機構による選択的な錐体抑制について"
+            }
+          ]
+        },
+        "collaborations": {
+          "subheading": "共同研究",
+          "content": [
+            {
+              "heading": "Melanopsin expressing retinal ganglion cells",
+              "content": [
+                "Katsunori Okajima,School of Engineering,Yokohama National University,Japan",
+                "Akiyoshi Kitaoka,Department of Psychology,Ritsumeikan University,Japan",
+                "Robert Lucas,Faculty of Life Sciences,The University of Manchester,UK",
+                "Su-ling Yeh,National Taiwan University,Taiwan"
+              ]
+            },
+            {
+              "heading": "Pupil & Clinical research",
+              "content": [
+                "Aki Kawasaki, Department of Neuro-ophthalmology, University of Lausanne, Switzerland",
+                "Martial Geiser, System engineering institute, HES-SO Valais-Wallis, Switzerland",
+                "John L Barbur,School of Community and Health Sciences,City University London,UK",
+                "James Wolffsohn,School of Life and Health Sciences,Aston University,UK"
+              ]
+            },
+            {
+              "heading": "Circadian Rhy thms",
+              "content": [
+                "Takeshi Morita,Department of Living Environmental Science,Fukuoka Women's University",
+                "Shigekazu Higuchi,Faculty of Design,Kyushu University,Japan",
+                "Shuhei Hashiguchi,Department of Chemistry, Biotechnology, and Chemical Engineering Graduate School of Science and Engineering, Kagoshima University,Japan"
+              ]
+            }
+          ]
+        },
+        "media": {
+          "subheading": "メディア掲載情報",
+          "content": [
+            {
+              "date": "2012/06/07, 14",
+              "heading": "週刊新潮で研究が紹介",
+              "media": "「サイエンス宅配便：目の中にある第３の受容体」（サイエンスライター竹内薫さん）"
+            },
+            {
+              "date": "2012/06/04",
+              "heading": "日経BPネットで研究が紹介",
+              "media": "「照明機器やディスプレイの省エネにもつながる」、明るさ感に影響を与える仕組みを鹿児島大学らが解明",
+              "link": "https://xtech.nikkei.com/dm/article/NEWS/20120604/221397/"
+            },
+            {
+              "date": "2012/05/28",
+              "heading": "南日本新聞22面で研究が紹介",
+              "media": "「網膜メラノプシン神経節細胞：明るさ知覚の機能確認」"
+            },
+            {
+              "date": "2011/3/26",
+              "heading": "南日本新聞 「研究のおと」欄",
+              "media": "「生体リズムの解明：手作り装置で細胞機能解明」"
+            },
+            {
+              "date": "2010/11",
+              "heading": "鹿児島大学広報誌 鹿大ジャーナルで研究が紹介",
+              "media": "「メラノプシン神経節細胞の機能解明に挑む」",
+              "link": "http://www.sda.nagoya-cu.ac.jp/tsujimura/kadaiNo185_2010.pdf"
+            },
+            {
+              "date": "2010/4/23",
+              "heading": "科学新聞",
+              "media": "「概日リズム調節に関与 新光受容器メカニズム発見」"
+            },
+            {
+              "date": "2010/6/11",
+              "heading": "南日本新聞",
+              "media": "「鹿児島知の最前線：時差ぼけを早期修正.新装置で神経細胞を刺激」"
+            },
+            {
+              "date": "2008/8",
+              "heading": "積水化学工業",
+              "media": "「自然に学ぶ研究事例：自然光に学ぶ多原色光源装置の開発」",
+              "link": "https://www.sekisui.co.jp/sustainability_report/"
+            }
+          ]
+        }
+      }
+    },
+    "students": {
+      "content": "現在お知らせはありません。"
+    }
+  }
+}
