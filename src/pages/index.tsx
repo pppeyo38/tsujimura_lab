@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>辻村研究室｜名古屋市立大学芸術工学部</title>
+        <title>{t('index.title')}</title>
       </Head>
 
       <section className={topVisual}>

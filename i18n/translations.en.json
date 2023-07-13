@@ -14,68 +14,70 @@
       }
     },
     "index": {
+      "title": "辻村研究室｜名古屋市立大学芸術工学部",
       "outline": [
-        "This is the home page of Seiichi Tsujimura Laboratory, Nagoya City University, Graduate School of Art and Design.",
-        "Our laboratory has developed the world's first device that can stimulate only melanopsin cells by adjusting the color of light, and is conducting experiments on the contribution of melanopsin cells to contrast sensitivity."
+        "名古屋市立大学芸術工学研究科 辻村誠一研究室のホームページです。",
+        "当研究室では、光の色を調整して世界で初めてメラノプシン細胞のみを刺激できる装置を開発し、メラノプシン細胞のコントラスト感度への寄与について実験を行っています。"
       ],
       "news": [
         {
           "date": "2023/06/22",
-          "text": "Discovered that the use of special illumination light improves contrast (text and image shading) sensitivity in humans.(PDF: 0.99MB)",
+          "text": "特殊な照明光を用いることによってヒトのコントラスト（文字や画像の濃淡）感度を改善することを発見(PDF: 0.99MB)",
           "link": "https://www.nagoya-cu.ac.jp/media/20230621press.pdf"
         },
         {
           "date": "2023/06/22",
-          "text": "We have renewed our homepage. Please use it for your higher education and laboratory assignments."
+          "text": "ホームページをリニューアルしました。進学や研究室配属などに役立ててください。"
         }
       ]
     },
     "laboratory": {
-      "outline": "生命を一つの汎用的情報処理システムとみなし、視覚情報である色や形、明るさ情報がどのような過程によって処理されるのかを神経生理学的、実験心理学的なアプローチで研究しています。",
+      "title": "Lab Info｜辻村研究室｜名古屋市立大学芸術工学部",
+      "outline": "We regard life as a general-purpose information processing system and study the processes by which visual information such as color, shape, and brightness is processed from a neurophysiological and experimental psychological approach.",
       "section": {
         "research": {
-          "subheading": "メラノプシン神経節細胞の研究",
+          "subheading": "Melanopsin ganglion cells",
           "content": [
-            "私たちは、色や明るさなどの感覚知覚情報処理と高次脳機能との関連性に着目しています。加えて、脳内で外界の光信号の符号化に関し重要な役割を担っているメラノプシン神経節細胞（intrinsicallyphotosensitive retinal ganglion cell:ipRGCs以下、メラノプシン細胞）の機能解明にも着目しています。網膜での処理が生体内でどのように処理・統合され、脳内でどのように表現されているのかという疑問に答えることが私たちの目標です。私たちは、心理物理学的手法と神経生理学的手法を用いて研究に取り組んでいます。私たちの眼球の網膜には、２種類の光受容器（錐体細胞、桿体細胞）が存在いています。この2つの光受容器のみによって、ヒトはものを見たり識別したりしていると長年考えられてきました。",
-            "しかしながら、３番目の光受容器であるメラノプシン細胞が発見されました。メラノプシン細胞はメラノプシンという光受容タンパク質を持つ細胞です。メラノプシン細胞の発見により、概日光制御や瞳孔光反射など、非撮像系経路(non-image-forming pathway)や撮像系経路(image-forming oathway)について根本的に見直されるようになりました。メラノプシン細胞は環境光を脳内で符号化する上で重要な役割を担っていると考えられています。環境光によって刺激されたメラノプシン細胞からの信号は、杆体や錐体といった古典的な視細胞からの信号とともに、非撮像系経路や撮像系経路の脳内機能に寄与しています。",
-            "私たちの研究グループでは世界で初めてメラノプシン細胞が明るさの知覚に寄与していることを発見しました。一方で、概日リズムの調節や瞳孔の対光反応、明るさの知覚等はメラノプシン細胞の機能のごく一部であり、メラノプシン細胞の機能はまだ他にもあるのではないかと考えられています。例えば、記憶や注意、気分、偏頭痛などにも影響するかもしれません。"
+            "We are focusing on the relationship between sensory information processing, such as color and brightness, and higher brain functions. In addition, we are interested in understanding the function of intrinsicallyphotosensitive retinal ganglion cells (ipRGCs), which play an important role in the encoding of external light signals in the brain. Our goal is to answer the question of how processing in the retina is processed and integrated in vivo and how it is expressed in the brain. We employ psychophysical and neurophysiological methods in our research. The retina of our eye contains two types of photoreceptors (cone cells and rod cells). It has long been thought that these two photoreceptors are the only ones that allow us to see and discriminate between objects.",
+            "However, a third photoreceptor, the melanopsin cell, has been discovered. Melanopsin cells possess a photoreceptor protein called melanopsin. The discovery of melanopsin cells has led to a fundamental rethinking of non-image-forming pathways and image-forming oathways, such as circadian light control and pupillary light reflex. Melanopsin cells are thought to play an important role in encoding ambient light in the brain. Signals from melanopsin cells stimulated by ambient light, along with signals from classical photoreceptor cells such as rods and cones, contribute to the function of non-imaging and imaging pathways in the brain.",
+            "Our research group was the first in the world to discover that melanopsin cells contribute to brightness perception. On the other hand, the regulation of circadian rhythm, pupillary counter-response, and brightness perception are only a small part of the functions of melanopsin cells, and it is thought that there may be still other functions of melanopsin cells. For example, they may also affect memory, attention, mood, and migraine headaches."
           ]
         },
         "studentResearch": {
-          "subheading": "実験心理学・脳神経科学",
+          "subheading": "Experimental Psychology and Neuroscience",
           "content": [
-            "メラノプシン神経節細胞の瞳孔径路への寄与の解明",
-            "色、輝度情報とメラノプシン神経節細胞との機能的関連性",
-            "光環境が概日リズムに及ぼす影響の解明",
-            "ヒトの色の知覚メカニズムの解明",
-            "ヒトの明るさ知覚メカニズムの解明"
+            "Contribution of melanopsin ganglion cells to the pupillary radial pathway.",
+            "Functional association of color and luminance information with melanopsin ganglion cells",
+            "Elucidating the Effects of Light Environment on Circadian Rhythms",
+            "Elucidation of human color perception mechanisms",
+            "Elucidation of human brightness perception mechanism"
           ]
         },
         "recentActivities": {
-          "subheading": "研究室での実験",
+          "subheading": "Laboratory Experiments",
           "content": [
-            "NVIDAのJetson Nanoを搭載したSparkFun JetBot AIロボットキットを利用してディープラーニングを勉強しました。以下の動画は、衝突回避走行デモを用いて落下回避と衝突回避を学習させて試走させた時のものです。"
+            "We used the SparkFun JetBot AI robot kit with NVIDA's Jetson Nano to study deep learning. The following video is from a test run using the collision avoidance driving demo to learn fall avoidance and collision avoidance."
           ]
         },
         "equipments": [
           {
-            "name": "分光放射照度計",
-            "detail": "人間の目で見える光の領域380nm～780nm間で1nmピッチ毎の物理エネルギー量（絶対値）を測定します。またその値から計算にて高精度で輝度・色度・色温度・主波長等も算出されます。様々な実験装置のキャリブレーションに用いています。",
+            "name": "Spectroradiometer",
+            "detail": "It measures the amount of physical energy (absolute value) per 1 nm pitch in the range of 380 nm to 780 nm of light visible to the human eye. The luminance, chromaticity, color temperature, main wavelength, etc. are also calculated with high precision from these values. It is used for calibration of various experimental equipment.",
             "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image1.jpg"
           },
           {
-            "name": "分光放射照度計",
-            "detail": "分光放射照度計CL-500Aは、光の演色評価数、相関色温度、色度、照度（JIS一般形AA級）、暗所視照度、三刺激値、主波長刺激純度、ピーク波長、分光放射照度値（360nm～780nm1nmピッチ：外部出力のみ）の測定が可能な分光放射照度計です。",
+            "name": "Spectroscopic irradiance meter",
+            "detail": "The CL-500A spectroradiometer is a spectroradiometer capable of measuring color rendering index, correlated color temperature, chromaticity, illuminance (JIS general type AA class), dark irradiance, tristimulus value, principal wavelength stimulus purity, peak wavelength, and spectral irradiance value (360 nm to 780 nm 1 nm pitch: external output only).",
             "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image2.jpg"
           },
           {
-            "name": "2次元色彩輝度計",
-            "detail": "RTC-21(2次元色彩輝度計)は、一般的なRGB三原色カメラでは捉えられない幅広い色域の色情報が取得できる、人の眼と等価な感度のXYZ表色系を採用したカメラです。取得した広色域・高色忠実XYZ映像をPCで確認できます。PCでのXYZ画像のファイル保存・分析が可能です。",
+            "name": "2D color luminance meter",
+            "detail": "The RTC-21 (2-D Color Luminance Meter) is a camera that uses an XYZ color system with sensitivity equivalent to that of the human eye, and can acquire color information over a wide color gamut that cannot be captured by ordinary RGB three-primary color cameras. The acquired wide color gamut and high color fidelity XYZ images can be checked on a PC, and XYZ image files can be saved and analyzed on a PC.",
             "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image3.jpg"
           },
           {
             "name": "LED Cube",
-            "detail": "THOUSLITE LEDCubeは、独自の最適化アルゴリズムと10個の特殊なLEDを用いて、異なる分光分布（SPD）でのあらゆる照明環境シュミレーションを簡単で正確に実現にする「照明環境シュミレート光源」です。",
+            "detail": "THOUSLITE LEDCube is a 'lighting environment simulation light source' that uses a proprietary optimization algorithm and 10 special LEDs to easily and accurately simulate any lighting environment with different spectral distribution (SPD).",
             "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image4.jpg"
           }
         ]

@@ -78,6 +78,7 @@ const listItem = css`
 
   span {
     ${textStyle};
+    cursor: pointer;
 
     &[data-is-current='false'] {
       color: ${Color.main_grey};
