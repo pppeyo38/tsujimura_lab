@@ -246,6 +246,13 @@
     },
     "students": {
       "content": "現在お知らせはありません。"
+    },
+    "nav": {
+      "schoolName": "Nagoya City University School of Design and Architecture",
+      "labName": "Tsujimura Sei-ichi Laboratory",
+      "adress1": "2-1-10, Kita Chikusa, ",
+      "adress2": "Chikusa-ku, Nagoya, 464-0083",
+      "adress3": "TEL:052-721-1225 FAX:052-721-3110"
     }
   }
 }

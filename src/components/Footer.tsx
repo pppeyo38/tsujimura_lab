@@ -1,23 +1,26 @@
 import { css } from '@linaria/core'
+import { useTranslation } from 'next-export-i18n'
 
 import { textStyle } from '@/components/typography/Text'
 import { Color, FontWeight } from '@/styles/StyleToken'
 
 export default function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer className={footer}>
       <div className={container}>
         <div className={inner}>
           <h2 className={footerName}>
-            <span className={footerSubName}>名古屋市立大学 芸術工学部</span>
-            辻村誠一研究室
+            <span className={footerSubName}>{t('nav.schoolName')}</span>
+            {t('nav.labName')}
           </h2>
           <address className={footerAddress}>
-            〒464-0083 愛知県名古屋市千種区
+            {t('nav.adress1')}
             <br className={spOnlyBr} />
-            北千種2丁目1番10号
+            {t('nav.adress2')}
             <br />
-            TEL:052-721-1225 (代) FAX:052-721-3110
+            {t('nav.adress3')}
           </address>
           <span className={copyRight}>© 2023 Tsujimura Laboratory</span>
         </div>
