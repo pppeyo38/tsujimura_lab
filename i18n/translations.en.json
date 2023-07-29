@@ -1,23 +1,10 @@
 {
   "i18n": {
-    "ui": {
-      "languageSwitcher": "Choose Language: "
-    },
-    "nav": {
-      "nyc": {
-        "text": "Go to New York City",
-        "route": "/nyc"
-      },
-      "index": {
-        "text": "Got To Paris",
-        "route": "/"
-      }
-    },
     "index": {
       "title": "辻村研究室｜名古屋市立大学芸術工学部",
       "outline": [
-        "This is the home page of Seiichi Tsujimura Laboratory, Nagoya City University, Graduate School of Art and Design.",
-        "Our laboratory has developed the world's first device that can stimulate only melanopsin cells by adjusting the color of light, and is conducting experiments on the contribution of melanopsin cells to contrast sensitivity."
+        "This is the home page of Sei-ichi Tsujimura Laboratory, Nagoya City University.",
+        "Our laboratory has developed the world's first device that can stimulate only melanopsin cells by adjusting the color of light, and is conducting experiments on the contribution of melanopsin cells to vision and non-visual functions in brain."
       ],
       "news": [
         {
@@ -33,7 +20,7 @@
     },
     "laboratory": {
       "title": "Lab Info｜辻村研究室｜名古屋市立大学芸術工学部",
-      "outline": "We regard life as a general-purpose information processing system and study the processes by which visual information such as color, shape, and brightness is processed from a neurophysiological and experimental psychological approach.",
+      "outline": "Prof. Tsujimura's interests are in the connection between sensory processes and higher brain functions, particularly through color and brightness processing. He also focuses on the function of ipRGCs, which play an important role in the brain. The aim of the research is to understand how sensory information is delivered, integrated and represented in the brain. Prof. Tsujimura and his collaborators were the first to show that ipRGCs contribute to brightness perception (T. M. Brown, S. Tsujimura et al., Melanopsin-based brightness discrimination in mice and humans. Curr Biol 22, 1134-1141 2012). Since then, many researchers have demonstrated the contribution of ipRGCs to brightness perception. It is considered very important for photometry and colorimetry to show the contribution of ipRGCs to brightness perception.",
       "section": {
         "research": {
           "subheading": "Melanopsin ganglion cells",
@@ -54,9 +41,9 @@
           ]
         },
         "recentActivities": {
-          "subheading": "Laboratory Experiments",
+          "subheading": "Laboratory Training",
           "content": [
-            "We used the SparkFun JetBot AI robot kit with NVIDA's Jetson Nano to study deep learning. The following video is from a test run using the collision avoidance driving demo to learn fall avoidance and collision avoidance."
+            "We used the NVIDA's Jetson Nano to study deep learning. The following video is from a test run using the collision avoidance driving demo to learn fall avoidance and collision avoidance."
           ]
         },
         "equipments": [
@@ -77,7 +64,7 @@
           },
           {
             "name": "LED Cube",
-            "detail": "THOUSLITE LEDCube is a 'lighting environment simulation light source' that uses a proprietary optimization algorithm and 10 special LEDs to easily and accurately simulate any lighting environment with different spectral distribution (SPD).",
+            "detail": "THOUSLITE LEDCube is a 'lighting environment simulation light source' that uses a proprietary optimization algorithm and 10 special LEDs to easily and accurately simulate any lighting environment with different spectral distribution (SPD). We modified this eqipment and used it for the experiments.",
             "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image4.jpg"
           }
         ]
