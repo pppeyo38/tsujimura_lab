@@ -38,7 +38,7 @@ const exLink = css`
   &::after {
     display: inline-block;
     margin-left: 2px;
-    content: url('/tsujimura/external-link.svg');
+    content: url('/external-link.svg');
     transform: translateY(2px);
   }
 `

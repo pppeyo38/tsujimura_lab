@@ -50,22 +50,22 @@
           {
             "name": "Spectroradiometer",
             "detail": "It measures the amount of physical energy (absolute value) per 1 nm pitch in the range of 380 nm to 780 nm of light visible to the human eye. The luminance, chromaticity, color temperature, main wavelength, etc. are also calculated with high precision from these values. It is used for calibration of various experimental equipment.",
-            "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image1.jpg"
+            "image": "/equipments/image1.jpg"
           },
           {
             "name": "Spectroscopic irradiance meter",
             "detail": "The CL-500A spectroradiometer is a spectroradiometer capable of measuring color rendering index, correlated color temperature, chromaticity, illuminance (JIS general type AA class), dark irradiance, tristimulus value, principal wavelength stimulus purity, peak wavelength, and spectral irradiance value (360 nm to 780 nm 1 nm pitch: external output only).",
-            "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image2.jpg"
+            "image": "/equipments/image2.jpg"
           },
           {
             "name": "2D color luminance meter",
             "detail": "The RTC-21 (2-D Color Luminance Meter) is a camera that uses an XYZ color system with sensitivity equivalent to that of the human eye, and can acquire color information over a wide color gamut that cannot be captured by ordinary RGB three-primary color cameras. The acquired wide color gamut and high color fidelity XYZ images can be checked on a PC, and XYZ image files can be saved and analyzed on a PC.",
-            "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image3.jpg"
+            "image": "/equipments/image3.jpg"
           },
           {
             "name": "LED Cube",
             "detail": "THOUSLITE LEDCube is a 'lighting environment simulation light source' that uses a proprietary optimization algorithm and 10 special LEDs to easily and accurately simulate any lighting environment with different spectral distribution (SPD). We modified this eqipment and used it for the experiments.",
-            "image": "https://www.sda.nagoya-cu.ac.jp/tsujimura/equipments/image4.jpg"
+            "image": "/equipments/image4.jpg"
           }
         ]
       }

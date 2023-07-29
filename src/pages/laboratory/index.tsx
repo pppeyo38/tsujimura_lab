@@ -9,6 +9,7 @@ import { Heading } from '@/components/typography/Heading'
 import { SubHeading } from '@/components/typography/SubHeading'
 import { Text, textStyle } from '@/components/typography/Text'
 import { Title } from '@/components/typography/Title'
+import { basePath } from '@/utils/basePath'
 
 type EquipmentType = {
   name: string
@@ -86,7 +87,7 @@ export default function Research() {
                     <Text>{item.detail}</Text>
                   </div>
                   <div className={imageBlock}>
-                    <img src={item.image} alt={item.name} />
+                    <img src={`${basePath}${item.image}`} alt={item.name} />
                   </div>
                 </li>
               )
